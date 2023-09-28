@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */; };
+		005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */; };
+		005D3C652AC5EE8700E4CAB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C642AC5EE8700E4CAB7 /* ViewController.swift */; };
+		005D3C682AC5EE8700E4CAB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C662AC5EE8700E4CAB7 /* Main.storyboard */; };
+		005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */; };
+		005D3C6D2AC5EE8800E4CAB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */; };
+		005D3C782AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C772AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift */; };
+		005D3C822AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C812AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift */; };
+		005D3C842AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C832AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		005D3C742AC5EE8800E4CAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D3C552AC5EE8700E4CAB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D3C5C2AC5EE8700E4CAB7;
+			remoteInfo = TeltechSpamKiller;
+		};
+		005D3C7E2AC5EE8800E4CAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D3C552AC5EE8700E4CAB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D3C5C2AC5EE8700E4CAB7;
+			remoteInfo = TeltechSpamKiller;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechSpamKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		005D3C642AC5EE8700E4CAB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		005D3C672AC5EE8700E4CAB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		005D3C6C2AC5EE8800E4CAB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		005D3C6E2AC5EE8800E4CAB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005D3C732AC5EE8800E4CAB7 /* TeltechSpamKillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechSpamKillerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D3C772AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerTests.swift; sourceTree = "<group>"; };
+		005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechSpamKillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D3C812AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerUITests.swift; sourceTree = "<group>"; };
+		005D3C832AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		005D3C5A2AC5EE8700E4CAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C702AC5EE8800E4CAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C7A2AC5EE8800E4CAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005D3C542AC5EE8700E4CAB7 = {
+			isa = PBXGroup;
+			children = (
+				005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */,
+				005D3C762AC5EE8800E4CAB7 /* TeltechSpamKillerTests */,
+				005D3C802AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */,
+				005D3C5E2AC5EE8700E4CAB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		005D3C5E2AC5EE8700E4CAB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */,
+				005D3C732AC5EE8800E4CAB7 /* TeltechSpamKillerTests.xctest */,
+				005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */,
+				005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */,
+				005D3C642AC5EE8700E4CAB7 /* ViewController.swift */,
+				005D3C662AC5EE8700E4CAB7 /* Main.storyboard */,
+				005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */,
+				005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */,
+				005D3C6E2AC5EE8800E4CAB7 /* Info.plist */,
+			);
+			path = TeltechSpamKiller;
+			sourceTree = "<group>";
+		};
+		005D3C762AC5EE8800E4CAB7 /* TeltechSpamKillerTests */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C772AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift */,
+			);
+			path = TeltechSpamKillerTests;
+			sourceTree = "<group>";
+		};
+		005D3C802AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C812AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift */,
+				005D3C832AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift */,
+			);
+			path = TeltechSpamKillerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005D3C872AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKiller" */;
+			buildPhases = (
+				005D3C592AC5EE8700E4CAB7 /* Sources */,
+				005D3C5A2AC5EE8700E4CAB7 /* Frameworks */,
+				005D3C5B2AC5EE8700E4CAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeltechSpamKiller;
+			productName = TeltechSpamKiller;
+			productReference = 005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		005D3C722AC5EE8800E4CAB7 /* TeltechSpamKillerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005D3C8A2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerTests" */;
+			buildPhases = (
+				005D3C6F2AC5EE8800E4CAB7 /* Sources */,
+				005D3C702AC5EE8800E4CAB7 /* Frameworks */,
+				005D3C712AC5EE8800E4CAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				005D3C752AC5EE8800E4CAB7 /* PBXTargetDependency */,
+			);
+			name = TeltechSpamKillerTests;
+			productName = TeltechSpamKillerTests;
+			productReference = 005D3C732AC5EE8800E4CAB7 /* TeltechSpamKillerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		005D3C7C2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005D3C8D2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerUITests" */;
+			buildPhases = (
+				005D3C792AC5EE8800E4CAB7 /* Sources */,
+				005D3C7A2AC5EE8800E4CAB7 /* Frameworks */,
+				005D3C7B2AC5EE8800E4CAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				005D3C7F2AC5EE8800E4CAB7 /* PBXTargetDependency */,
+			);
+			name = TeltechSpamKillerUITests;
+			productName = TeltechSpamKillerUITests;
+			productReference = 005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		005D3C552AC5EE8700E4CAB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					005D3C5C2AC5EE8700E4CAB7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					005D3C722AC5EE8800E4CAB7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 005D3C5C2AC5EE8700E4CAB7;
+					};
+					005D3C7C2AC5EE8800E4CAB7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 005D3C5C2AC5EE8700E4CAB7;
+					};
+				};
+			};
+			buildConfigurationList = 005D3C582AC5EE8700E4CAB7 /* Build configuration list for PBXProject "TeltechSpamKiller" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 005D3C542AC5EE8700E4CAB7;
+			productRefGroup = 005D3C5E2AC5EE8700E4CAB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */,
+				005D3C722AC5EE8800E4CAB7 /* TeltechSpamKillerTests */,
+				005D3C7C2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		005D3C5B2AC5EE8700E4CAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3C6D2AC5EE8800E4CAB7 /* LaunchScreen.storyboard in Resources */,
+				005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */,
+				005D3C682AC5EE8700E4CAB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C712AC5EE8800E4CAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C7B2AC5EE8800E4CAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		005D3C592AC5EE8700E4CAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3C652AC5EE8700E4CAB7 /* ViewController.swift in Sources */,
+				005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */,
+				005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C6F2AC5EE8800E4CAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3C782AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3C792AC5EE8800E4CAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3C842AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift in Sources */,
+				005D3C822AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		005D3C752AC5EE8800E4CAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */;
+			targetProxy = 005D3C742AC5EE8800E4CAB7 /* PBXContainerItemProxy */;
+		};
+		005D3C7F2AC5EE8800E4CAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */;
+			targetProxy = 005D3C7E2AC5EE8800E4CAB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		005D3C662AC5EE8700E4CAB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				005D3C672AC5EE8700E4CAB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				005D3C6C2AC5EE8800E4CAB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		005D3C852AC5EE8800E4CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		005D3C862AC5EE8800E4CAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		005D3C882AC5EE8800E4CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKiller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		005D3C892AC5EE8800E4CAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKiller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		005D3C8B2AC5EE8800E4CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeltechSpamKiller.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TeltechSpamKiller";
+			};
+			name = Debug;
+		};
+		005D3C8C2AC5EE8800E4CAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeltechSpamKiller.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TeltechSpamKiller";
+			};
+			name = Release;
+		};
+		005D3C8E2AC5EE8800E4CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeltechSpamKiller;
+			};
+			name = Debug;
+		};
+		005D3C8F2AC5EE8800E4CAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeltechSpamKiller;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005D3C582AC5EE8700E4CAB7 /* Build configuration list for PBXProject "TeltechSpamKiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D3C852AC5EE8800E4CAB7 /* Debug */,
+				005D3C862AC5EE8800E4CAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D3C872AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D3C882AC5EE8800E4CAB7 /* Debug */,
+				005D3C892AC5EE8800E4CAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D3C8A2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D3C8B2AC5EE8800E4CAB7 /* Debug */,
+				005D3C8C2AC5EE8800E4CAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D3C8D2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D3C8E2AC5EE8800E4CAB7 /* Debug */,
+				005D3C8F2AC5EE8800E4CAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 005D3C552AC5EE8700E4CAB7 /* Project object */;
+}
