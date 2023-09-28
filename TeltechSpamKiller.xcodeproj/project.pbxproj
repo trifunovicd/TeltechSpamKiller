@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */; };
 		005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */; };
-		005D3C652AC5EE8700E4CAB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C642AC5EE8700E4CAB7 /* ViewController.swift */; };
-		005D3C682AC5EE8700E4CAB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C662AC5EE8700E4CAB7 /* Main.storyboard */; };
 		005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */; };
-		005D3C6D2AC5EE8800E4CAB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */; };
 		005D3C782AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C772AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift */; };
 		005D3C822AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C812AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift */; };
 		005D3C842AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C832AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift */; };
+		005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C912AC6236800E4CAB7 /* Coordinator.swift */; };
+		005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */; };
+		005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */; };
+		005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C992AC62E0700E4CAB7 /* R.generated.swift */; };
+		67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */; };
+		6FAA92CF8ED6C8377DEF4892 /* Pods_TeltechSpamKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */; };
+		C75D83B03A562A1AF3036593 /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +43,26 @@
 		005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechSpamKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		005D3C642AC5EE8700E4CAB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		005D3C672AC5EE8700E4CAB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		005D3C6C2AC5EE8800E4CAB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		005D3C6E2AC5EE8800E4CAB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005D3C732AC5EE8800E4CAB7 /* TeltechSpamKillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechSpamKillerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3C772AC5EE8800E4CAB7 /* TeltechSpamKillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerTests.swift; sourceTree = "<group>"; };
 		005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechSpamKillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3C812AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerUITests.swift; sourceTree = "<group>"; };
 		005D3C832AC5EE8800E4CAB7 /* TeltechSpamKillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		005D3C912AC6236800E4CAB7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		005D3C992AC62E0700E4CAB7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.release.xcconfig"; sourceTree = "<group>"; };
+		346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.debug.xcconfig"; sourceTree = "<group>"; };
+		4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeltechSpamKillerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F373992BFDD1AC9FA7DCC44 /* Pods-TeltechSpamKillerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKillerTests.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKillerTests/Pods-TeltechSpamKillerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BED6C3B306D1362543B4C28B /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller-TeltechSpamKillerUITests.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F34476A95CEC294E4BBA716A /* Pods-TeltechSpamKillerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKillerTests.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKillerTests/Pods-TeltechSpamKillerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeltechSpamKiller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FAA92CF8ED6C8377DEF4892 /* Pods_TeltechSpamKillerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75D83B03A562A1AF3036593 /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				005D3C762AC5EE8800E4CAB7 /* TeltechSpamKillerTests */,
 				005D3C802AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */,
 				005D3C5E2AC5EE8700E4CAB7 /* Products */,
+				8714C457CE3F6D8887763194 /* Pods */,
+				927C64C27B0F8D5401B03443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +118,11 @@
 		005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
 			isa = PBXGroup;
 			children = (
+				005D3C902AC6234D00E4CAB7 /* Coordinator */,
 				005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */,
 				005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */,
-				005D3C642AC5EE8700E4CAB7 /* ViewController.swift */,
-				005D3C662AC5EE8700E4CAB7 /* Main.storyboard */,
+				005D3C992AC62E0700E4CAB7 /* R.generated.swift */,
 				005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */,
-				005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */,
 				005D3C6E2AC5EE8800E4CAB7 /* Info.plist */,
 			);
 			path = TeltechSpamKiller;
@@ -127,6 +145,47 @@
 			path = TeltechSpamKillerUITests;
 			sourceTree = "<group>";
 		};
+		005D3C902AC6234D00E4CAB7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C932AC623D100E4CAB7 /* Delegate */,
+				005D3C912AC6236800E4CAB7 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		005D3C932AC623D100E4CAB7 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */,
+				005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		8714C457CE3F6D8887763194 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */,
+				327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */,
+				4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */,
+				BED6C3B306D1362543B4C28B /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.release.xcconfig */,
+				F34476A95CEC294E4BBA716A /* Pods-TeltechSpamKillerTests.debug.xcconfig */,
+				7F373992BFDD1AC9FA7DCC44 /* Pods-TeltechSpamKillerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		927C64C27B0F8D5401B03443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */,
+				5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */,
+				789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 005D3C872AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKiller" */;
 			buildPhases = (
+				76AFB0B0B959B9AAA430D080 /* [CP] Check Pods Manifest.lock */,
+				005D3C982AC6274F00E4CAB7 /* R.swift Script */,
 				005D3C592AC5EE8700E4CAB7 /* Sources */,
 				005D3C5A2AC5EE8700E4CAB7 /* Frameworks */,
 				005D3C5B2AC5EE8700E4CAB7 /* Resources */,
+				D61A8A4AD359B808667E92B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 005D3C8A2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerTests" */;
 			buildPhases = (
+				9700200A0D6DBBFEBA160D41 /* [CP] Check Pods Manifest.lock */,
 				005D3C6F2AC5EE8800E4CAB7 /* Sources */,
 				005D3C702AC5EE8800E4CAB7 /* Frameworks */,
 				005D3C712AC5EE8800E4CAB7 /* Resources */,
@@ -169,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 005D3C8D2AC5EE8800E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerUITests" */;
 			buildPhases = (
+				F6C922F77B0E4F62818526B1 /* [CP] Check Pods Manifest.lock */,
 				005D3C792AC5EE8800E4CAB7 /* Sources */,
 				005D3C7A2AC5EE8800E4CAB7 /* Frameworks */,
 				005D3C7B2AC5EE8800E4CAB7 /* Resources */,
+				240E24F9C207D55EAB0A43DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005D3C6D2AC5EE8800E4CAB7 /* LaunchScreen.storyboard in Resources */,
 				005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */,
-				005D3C682AC5EE8700E4CAB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +316,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		005D3C982AC6274F00E4CAB7 /* R.swift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "R.swift Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		240E24F9C207D55EAB0A43DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76AFB0B0B959B9AAA430D080 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeltechSpamKiller-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9700200A0D6DBBFEBA160D41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeltechSpamKillerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D61A8A4AD359B808667E92B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C922F77B0E4F62818526B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeltechSpamKiller-TeltechSpamKillerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		005D3C592AC5EE8700E4CAB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005D3C652AC5EE8700E4CAB7 /* ViewController.swift in Sources */,
+				005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */,
+				005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */,
+				005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */,
 				005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */,
+				005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */,
 				005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,25 +484,6 @@
 			targetProxy = 005D3C7E2AC5EE8800E4CAB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		005D3C662AC5EE8700E4CAB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				005D3C672AC5EE8700E4CAB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		005D3C6B2AC5EE8800E4CAB7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				005D3C6C2AC5EE8800E4CAB7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		005D3C852AC5EE8800E4CAB7 /* Debug */ = {
@@ -353,7 +523,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -416,7 +586,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -437,6 +607,7 @@
 		};
 		005D3C882AC5EE8800E4CAB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,10 +617,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +633,7 @@
 		};
 		005D3C892AC5EE8800E4CAB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,10 +643,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +659,7 @@
 		};
 		005D3C8B2AC5EE8800E4CAB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34476A95CEC294E4BBA716A /* Pods-TeltechSpamKillerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +680,7 @@
 		};
 		005D3C8C2AC5EE8800E4CAB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F373992BFDD1AC9FA7DCC44 /* Pods-TeltechSpamKillerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,8 +701,8 @@
 		};
 		005D3C8E2AC5EE8800E4CAB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PU98ZL5A45;
@@ -551,8 +719,8 @@
 		};
 		005D3C8F2AC5EE8800E4CAB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED6C3B306D1362543B4C28B /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PU98ZL5A45;
