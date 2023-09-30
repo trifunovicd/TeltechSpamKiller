@@ -17,6 +17,19 @@
 		005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */; };
 		005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */; };
 		005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C992AC62E0700E4CAB7 /* R.generated.swift */; };
+		005D3CA02AC69CB700E4CAB7 /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */; };
+		005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */; };
+		005D3CA52AC69E7700E4CAB7 /* HomeContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */; };
+		005D3CA82AC6A25600E4CAB7 /* HomeContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */; };
+		005D3CAB2AC6A4BE00E4CAB7 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CAA2AC6A4BE00E4CAB7 /* RxSchedulers.swift */; };
+		005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */; };
+		005D3CB42AC6B0F700E4CAB7 /* RecentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */; };
+		005D3CB62AC6B10900E4CAB7 /* RecentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */; };
+		005D3CB82AC6B13200E4CAB7 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */; };
+		005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CBD2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift */; };
+		005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */; };
+		005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */; };
+		005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC42AC7222F00E4CAB7 /* CallManager.swift */; };
 		67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */; };
 		6FAA92CF8ED6C8377DEF4892 /* Pods_TeltechSpamKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */; };
 		C75D83B03A562A1AF3036593 /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */; };
@@ -54,6 +67,19 @@
 		005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		005D3C992AC62E0700E4CAB7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
+		005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewModel.swift; sourceTree = "<group>"; };
+		005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerCoordinator.swift; sourceTree = "<group>"; };
+		005D3CAA2AC6A4BE00E4CAB7 /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
+		005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsCoordinator.swift; sourceTree = "<group>"; };
+		005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewModel.swift; sourceTree = "<group>"; };
+		005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
+		005D3CBD2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedCoordinator.swift; sourceTree = "<group>"; };
+		005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewModel.swift; sourceTree = "<group>"; };
+		005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewController.swift; sourceTree = "<group>"; };
+		005D3CC42AC7222F00E4CAB7 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.release.xcconfig"; sourceTree = "<group>"; };
 		346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.debug.xcconfig"; sourceTree = "<group>"; };
 		4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,9 +144,13 @@
 		005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
 			isa = PBXGroup;
 			children = (
-				005D3C902AC6234D00E4CAB7 /* Coordinator */,
+				005D3CAC2AC6AAEE00E4CAB7 /* Utils */,
+				005D3C9B2AC69C2E00E4CAB7 /* Home */,
+				005D3CAF2AC6B05200E4CAB7 /* Recents */,
+				005D3CB92AC6D59500E4CAB7 /* Blocked */,
 				005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */,
 				005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */,
+				005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */,
 				005D3C992AC62E0700E4CAB7 /* R.generated.swift */,
 				005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */,
 				005D3C6E2AC5EE8800E4CAB7 /* Info.plist */,
@@ -161,6 +191,143 @@
 				005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		005D3C9B2AC69C2E00E4CAB7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C9C2AC69C5B00E4CAB7 /* Coordinator */,
+				005D3C9D2AC69C6600E4CAB7 /* ViewModel */,
+				005D3C9E2AC69C7500E4CAB7 /* UI */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		005D3C9C2AC69C5B00E4CAB7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		005D3C9D2AC69C6600E4CAB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		005D3C9E2AC69C7500E4CAB7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		005D3CA12AC69E3400E4CAB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		005D3CA92AC6A4AE00E4CAB7 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CAA2AC6A4BE00E4CAB7 /* RxSchedulers.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		005D3CAC2AC6AAEE00E4CAB7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CC32AC7221F00E4CAB7 /* CallManager */,
+				005D3C902AC6234D00E4CAB7 /* Coordinator */,
+				005D3CA12AC69E3400E4CAB7 /* ViewModel */,
+				005D3CA92AC6A4AE00E4CAB7 /* Rx */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		005D3CAF2AC6B05200E4CAB7 /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CB22AC6B07100E4CAB7 /* Coordinator */,
+				005D3CB12AC6B06800E4CAB7 /* ViewModel */,
+				005D3CB02AC6B06300E4CAB7 /* UI */,
+			);
+			path = Recents;
+			sourceTree = "<group>";
+		};
+		005D3CB02AC6B06300E4CAB7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		005D3CB12AC6B06800E4CAB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		005D3CB22AC6B07100E4CAB7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		005D3CB92AC6D59500E4CAB7 /* Blocked */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CBC2AC6D5B400E4CAB7 /* Coordinator */,
+				005D3CBB2AC6D5AB00E4CAB7 /* ViewModel */,
+				005D3CBA2AC6D5A400E4CAB7 /* UI */,
+			);
+			path = Blocked;
+			sourceTree = "<group>";
+		};
+		005D3CBA2AC6D5A400E4CAB7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		005D3CBB2AC6D5AB00E4CAB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		005D3CBC2AC6D5B400E4CAB7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CBD2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		005D3CC32AC7221F00E4CAB7 /* CallManager */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CC42AC7222F00E4CAB7 /* CallManager.swift */,
+			);
+			path = CallManager;
 			sourceTree = "<group>";
 		};
 		8714C457CE3F6D8887763194 /* Pods */ = {
@@ -444,9 +611,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005D3CB82AC6B13200E4CAB7 /* RecentsViewController.swift in Sources */,
+				005D3CB42AC6B0F700E4CAB7 /* RecentsCoordinator.swift in Sources */,
+				005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */,
+				005D3CA52AC69E7700E4CAB7 /* HomeContainerViewModel.swift in Sources */,
+				005D3CAB2AC6A4BE00E4CAB7 /* RxSchedulers.swift in Sources */,
+				005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */,
+				005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */,
 				005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */,
 				005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */,
+				005D3CA82AC6A25600E4CAB7 /* HomeContainerCoordinator.swift in Sources */,
+				005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */,
+				005D3CA02AC69CB700E4CAB7 /* HomeContainerViewController.swift in Sources */,
 				005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */,
+				005D3CB62AC6B10900E4CAB7 /* RecentsViewModel.swift in Sources */,
+				005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */,
+				005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */,
 				005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */,
 				005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */,
 				005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */,
@@ -617,6 +797,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,6 +824,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

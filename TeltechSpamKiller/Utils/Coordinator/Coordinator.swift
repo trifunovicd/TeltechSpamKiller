@@ -8,6 +8,7 @@
 import UIKit
 
 public protocol Coordinator: AnyObject {
+    var parentCoordinatorDelegate: ParentCoordinatorDelegate? { get }
     var childCoordinators: [Coordinator] { get set }
     var presenter: UINavigationController { get }
     func start()
@@ -15,10 +16,10 @@ public protocol Coordinator: AnyObject {
 
 public extension Coordinator {
     func addChildCoordinator(_ coordinator: Coordinator) {
-        self.childCoordinators.append(coordinator)
+        childCoordinators.append(coordinator)
     }
     
     func removeChildCoordinator(_ coordinator: Coordinator) {
-        self.childCoordinators = self.childCoordinators.filter { $0 !== coordinator }
+        childCoordinators = childCoordinators.filter { $0 !== coordinator }
     }
 }
