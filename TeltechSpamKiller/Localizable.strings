@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TeltechSpamKiller
+
+  Created by DTech on 01.10.2023..
+  
+*/
+
+"recents" = "Recents";
+"blocked" = "Blocked";
+"general_error_title" = "Error";
+"general_error_message" = "An error occurred.";
+"general_error_action" = "OK";

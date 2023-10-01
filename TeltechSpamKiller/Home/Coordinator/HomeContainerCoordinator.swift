@@ -46,7 +46,7 @@ private extension HomeContainerCoordinator {
     
     func createRecentsCoordinator() -> Coordinator {
         let navigationController = UINavigationController()
-        navigationController.tabBarItem = UITabBarItem(title: "Recents", image: UIImage(systemName: "clock"), selectedImage: UIImage(systemName: "clock.fill"))
+        navigationController.tabBarItem = UITabBarItem(title: R.string.localizable.recents(), image: UIImage(systemName: "clock"), selectedImage: UIImage(systemName: "clock.fill"))
         let recentsCoordinator = RecentsCoordinator(presenter: navigationController)
         recentsCoordinator.parentCoordinatorDelegate = self
         return recentsCoordinator
@@ -54,7 +54,7 @@ private extension HomeContainerCoordinator {
     
     func createBlockedCoordinator() -> Coordinator {
         let navigationController = UINavigationController()
-        navigationController.tabBarItem = UITabBarItem(title: "Blocked", image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
+        navigationController.tabBarItem = UITabBarItem(title: R.string.localizable.blocked(), image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
         let blockedCoordinator = BlockedCoordinator(presenter: navigationController)
         blockedCoordinator.parentCoordinatorDelegate = self
         return blockedCoordinator

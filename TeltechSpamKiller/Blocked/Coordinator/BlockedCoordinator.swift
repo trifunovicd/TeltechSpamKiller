@@ -28,7 +28,7 @@ final class BlockedCoordinator: NSObject, Coordinator {
 
 private extension BlockedCoordinator {
     func createBlockedController() -> BlockedViewController {
-        let dependencies = BlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, coordinatorDelegate: self)
+        let dependencies = BlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, dataSource: BlockedDataSource(), coordinatorDelegate: self)
         let viewModel = BlockedViewModel(dependencies: dependencies)
         let viewController = BlockedViewController(viewModel: viewModel)
         return viewController

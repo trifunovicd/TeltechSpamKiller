@@ -30,6 +30,25 @@
 		005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */; };
 		005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */; };
 		005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC42AC7222F00E4CAB7 /* CallManager.swift */; };
+		005D3CD42AC8497F00E4CAB7 /* TeltechSpamKillerData.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005D3CD72AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */; };
+		005D3CD82AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		005D3CDD2AC84A7F00E4CAB7 /* TeltechContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC72AC842DC00E4CAB7 /* TeltechContacts.xcdatamodeld */; };
+		005D3CDF2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */; };
+		005D3CE32AC8621E00E4CAB7 /* BlockedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */; };
+		005D3CE62AC86C4900E4CAB7 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */; };
+		005D3CE92AC89DCC00E4CAB7 /* OutputViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE82AC89DCC00E4CAB7 /* OutputViewModeling.swift */; };
+		005D3CEC2AC89EB900E4CAB7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CEB2AC89EB900E4CAB7 /* NetworkError.swift */; };
+		005D3CEF2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CEE2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift */; };
+		005D3CF12AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CF02AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift */; };
+		005D3CF42AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CF32AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift */; };
+		005D3CF72AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CF62AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift */; };
+		005D3CFA2AC8B45800E4CAB7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CF92AC8B45800E4CAB7 /* UIView+Extension.swift */; };
+		005D3CFC2AC8B9D600E4CAB7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CFB2AC8B9D600E4CAB7 /* UITableView+Extension.swift */; };
+		005D3CFF2AC8C81E00E4CAB7 /* BlockedInteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CFE2AC8C81E00E4CAB7 /* BlockedInteractionType.swift */; };
+		005D3D022AC8E89400E4CAB7 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3D012AC8E89400E4CAB7 /* Loading.swift */; };
+		005D3D042AC8F6AA00E4CAB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 005D3D032AC8F6AA00E4CAB7 /* Localizable.strings */; };
+		005D3D072AC9001B00E4CAB7 /* Erroring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3D062AC9001B00E4CAB7 /* Erroring.swift */; };
 		67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */; };
 		6FAA92CF8ED6C8377DEF4892 /* Pods_TeltechSpamKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */; };
 		C75D83B03A562A1AF3036593 /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */; };
@@ -50,7 +69,28 @@
 			remoteGlobalIDString = 005D3C5C2AC5EE8700E4CAB7;
 			remoteInfo = TeltechSpamKiller;
 		};
+		005D3CD52AC8497F00E4CAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D3C552AC5EE8700E4CAB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D3CCE2AC8497F00E4CAB7;
+			remoteInfo = TeltechSpamKillerData;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		005D3CDC2AC8497F00E4CAB7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				005D3CD82AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechSpamKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +120,25 @@
 		005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewModel.swift; sourceTree = "<group>"; };
 		005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewController.swift; sourceTree = "<group>"; };
 		005D3CC42AC7222F00E4CAB7 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		005D3CC82AC842DC00E4CAB7 /* TeltechContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeltechContacts.xcdatamodel; sourceTree = "<group>"; };
+		005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeltechSpamKillerData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeltechSpamKillerData.h; sourceTree = "<group>"; };
+		005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerDataManager.swift; sourceTree = "<group>"; };
+		005D3CE02AC84D4500E4CAB7 /* TeltechSpamKiller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeltechSpamKiller.entitlements; sourceTree = "<group>"; };
+		005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedDataSource.swift; sourceTree = "<group>"; };
+		005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
+		005D3CE82AC89DCC00E4CAB7 /* OutputViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewModeling.swift; sourceTree = "<group>"; };
+		005D3CEB2AC89EB900E4CAB7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		005D3CEE2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableRowItem.swift; sourceTree = "<group>"; };
+		005D3CF02AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableSectionItem.swift; sourceTree = "<group>"; };
+		005D3CF32AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedRxDataSource.swift; sourceTree = "<group>"; };
+		005D3CF62AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedUITableViewCell.swift; sourceTree = "<group>"; };
+		005D3CF92AC8B45800E4CAB7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		005D3CFB2AC8B9D600E4CAB7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		005D3CFE2AC8C81E00E4CAB7 /* BlockedInteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedInteractionType.swift; sourceTree = "<group>"; };
+		005D3D012AC8E89400E4CAB7 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		005D3D032AC8F6AA00E4CAB7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		005D3D062AC9001B00E4CAB7 /* Erroring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erroring.swift; sourceTree = "<group>"; };
 		327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.release.xcconfig"; sourceTree = "<group>"; };
 		346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.debug.xcconfig"; sourceTree = "<group>"; };
 		4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005D3CD72AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Frameworks */,
 				67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +176,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		005D3CCC2AC8497F00E4CAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */,
+				005D3CD02AC8497F00E4CAB7 /* TeltechSpamKillerData */,
 				005D3C762AC5EE8800E4CAB7 /* TeltechSpamKillerTests */,
 				005D3C802AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */,
 				005D3C5E2AC5EE8700E4CAB7 /* Products */,
@@ -137,6 +205,7 @@
 				005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */,
 				005D3C732AC5EE8800E4CAB7 /* TeltechSpamKillerTests.xctest */,
 				005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */,
+				005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +213,7 @@
 		005D3C5F2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
 			isa = PBXGroup;
 			children = (
+				005D3CE02AC84D4500E4CAB7 /* TeltechSpamKiller.entitlements */,
 				005D3CAC2AC6AAEE00E4CAB7 /* Utils */,
 				005D3C9B2AC69C2E00E4CAB7 /* Home */,
 				005D3CAF2AC6B05200E4CAB7 /* Recents */,
@@ -152,6 +222,7 @@
 				005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */,
 				005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */,
 				005D3C992AC62E0700E4CAB7 /* R.generated.swift */,
+				005D3D032AC8F6AA00E4CAB7 /* Localizable.strings */,
 				005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */,
 				005D3C6E2AC5EE8800E4CAB7 /* Info.plist */,
 			);
@@ -230,6 +301,7 @@
 		005D3CA12AC69E3400E4CAB7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				005D3CE72AC89D8F00E4CAB7 /* Output */,
 				005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */,
 			);
 			path = ViewModel;
@@ -246,6 +318,11 @@
 		005D3CAC2AC6AAEE00E4CAB7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				005D3D002AC8E88700E4CAB7 /* Loading */,
+				005D3CF82AC8B43A00E4CAB7 /* Extension */,
+				005D3CED2AC8AA6700E4CAB7 /* Collections */,
+				005D3CEA2AC89EAD00E4CAB7 /* Error */,
+				005D3CE42AC86C3B00E4CAB7 /* DataWrapper */,
 				005D3CC32AC7221F00E4CAB7 /* CallManager */,
 				005D3C902AC6234D00E4CAB7 /* Coordinator */,
 				005D3CA12AC69E3400E4CAB7 /* ViewModel */,
@@ -291,6 +368,9 @@
 		005D3CB92AC6D59500E4CAB7 /* Blocked */ = {
 			isa = PBXGroup;
 			children = (
+				005D3CFD2AC8C7ED00E4CAB7 /* Model */,
+				005D3CF22AC8B17B00E4CAB7 /* RxDataSource */,
+				005D3CE12AC8620A00E4CAB7 /* DataSource */,
 				005D3CBC2AC6D5B400E4CAB7 /* Coordinator */,
 				005D3CBB2AC6D5AB00E4CAB7 /* ViewModel */,
 				005D3CBA2AC6D5A400E4CAB7 /* UI */,
@@ -301,6 +381,7 @@
 		005D3CBA2AC6D5A400E4CAB7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				005D3CF52AC8B26400E4CAB7 /* Cell */,
 				005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */,
 			);
 			path = UI;
@@ -330,6 +411,107 @@
 			path = CallManager;
 			sourceTree = "<group>";
 		};
+		005D3CD02AC8497F00E4CAB7 /* TeltechSpamKillerData */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CC72AC842DC00E4CAB7 /* TeltechContacts.xcdatamodeld */,
+				005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */,
+				005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */,
+			);
+			path = TeltechSpamKillerData;
+			sourceTree = "<group>";
+		};
+		005D3CE12AC8620A00E4CAB7 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		005D3CE42AC86C3B00E4CAB7 /* DataWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */,
+			);
+			path = DataWrapper;
+			sourceTree = "<group>";
+		};
+		005D3CE72AC89D8F00E4CAB7 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CE82AC89DCC00E4CAB7 /* OutputViewModeling.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		005D3CEA2AC89EAD00E4CAB7 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				005D3D052AC9000A00E4CAB7 /* Erroring */,
+				005D3CEB2AC89EB900E4CAB7 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		005D3CED2AC8AA6700E4CAB7 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CEE2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift */,
+				005D3CF02AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		005D3CF22AC8B17B00E4CAB7 /* RxDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CF32AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift */,
+			);
+			path = RxDataSource;
+			sourceTree = "<group>";
+		};
+		005D3CF52AC8B26400E4CAB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CF62AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		005D3CF82AC8B43A00E4CAB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CF92AC8B45800E4CAB7 /* UIView+Extension.swift */,
+				005D3CFB2AC8B9D600E4CAB7 /* UITableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		005D3CFD2AC8C7ED00E4CAB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				005D3CFE2AC8C81E00E4CAB7 /* BlockedInteractionType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		005D3D002AC8E88700E4CAB7 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				005D3D012AC8E89400E4CAB7 /* Loading.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		005D3D052AC9000A00E4CAB7 /* Erroring */ = {
+			isa = PBXGroup;
+			children = (
+				005D3D062AC9001B00E4CAB7 /* Erroring.swift */,
+			);
+			path = Erroring;
+			sourceTree = "<group>";
+		};
 		8714C457CE3F6D8887763194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +537,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		005D3CCA2AC8497F00E4CAB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3CD42AC8497F00E4CAB7 /* TeltechSpamKillerData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */ = {
 			isa = PBXNativeTarget;
@@ -366,10 +559,12 @@
 				005D3C5A2AC5EE8700E4CAB7 /* Frameworks */,
 				005D3C5B2AC5EE8700E4CAB7 /* Resources */,
 				D61A8A4AD359B808667E92B5 /* [CP] Embed Pods Frameworks */,
+				005D3CDC2AC8497F00E4CAB7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				005D3CD62AC8497F00E4CAB7 /* PBXTargetDependency */,
 			);
 			name = TeltechSpamKiller;
 			productName = TeltechSpamKiller;
@@ -415,6 +610,24 @@
 			productReference = 005D3C7D2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		005D3CCE2AC8497F00E4CAB7 /* TeltechSpamKillerData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005D3CD92AC8497F00E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerData" */;
+			buildPhases = (
+				005D3CCA2AC8497F00E4CAB7 /* Headers */,
+				005D3CCB2AC8497F00E4CAB7 /* Sources */,
+				005D3CCC2AC8497F00E4CAB7 /* Frameworks */,
+				005D3CCD2AC8497F00E4CAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeltechSpamKillerData;
+			productName = TeltechSpamKillerData;
+			productReference = 005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -436,6 +649,10 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 005D3C5C2AC5EE8700E4CAB7;
 					};
+					005D3CCE2AC8497F00E4CAB7 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
 				};
 			};
 			buildConfigurationList = 005D3C582AC5EE8700E4CAB7 /* Build configuration list for PBXProject "TeltechSpamKiller" */;
@@ -454,6 +671,7 @@
 				005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */,
 				005D3C722AC5EE8800E4CAB7 /* TeltechSpamKillerTests */,
 				005D3C7C2AC5EE8800E4CAB7 /* TeltechSpamKillerUITests */,
+				005D3CCE2AC8497F00E4CAB7 /* TeltechSpamKillerData */,
 			);
 		};
 /* End PBXProject section */
@@ -464,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */,
+				005D3D042AC8F6AA00E4CAB7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +694,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		005D3C7B2AC5EE8800E4CAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005D3CCD2AC8497F00E4CAB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,19 +839,32 @@
 			files = (
 				005D3CB82AC6B13200E4CAB7 /* RecentsViewController.swift in Sources */,
 				005D3CB42AC6B0F700E4CAB7 /* RecentsCoordinator.swift in Sources */,
+				005D3CEC2AC89EB900E4CAB7 /* NetworkError.swift in Sources */,
+				005D3CF72AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift in Sources */,
+				005D3CF12AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift in Sources */,
 				005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */,
 				005D3CA52AC69E7700E4CAB7 /* HomeContainerViewModel.swift in Sources */,
+				005D3CFF2AC8C81E00E4CAB7 /* BlockedInteractionType.swift in Sources */,
 				005D3CAB2AC6A4BE00E4CAB7 /* RxSchedulers.swift in Sources */,
 				005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */,
+				005D3CE32AC8621E00E4CAB7 /* BlockedDataSource.swift in Sources */,
 				005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */,
 				005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */,
+				005D3D022AC8E89400E4CAB7 /* Loading.swift in Sources */,
 				005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */,
 				005D3CA82AC6A25600E4CAB7 /* HomeContainerCoordinator.swift in Sources */,
+				005D3CF42AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift in Sources */,
+				005D3D072AC9001B00E4CAB7 /* Erroring.swift in Sources */,
 				005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */,
 				005D3CA02AC69CB700E4CAB7 /* HomeContainerViewController.swift in Sources */,
 				005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */,
 				005D3CB62AC6B10900E4CAB7 /* RecentsViewModel.swift in Sources */,
+				005D3CFC2AC8B9D600E4CAB7 /* UITableView+Extension.swift in Sources */,
 				005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */,
+				005D3CE92AC89DCC00E4CAB7 /* OutputViewModeling.swift in Sources */,
+				005D3CE62AC86C4900E4CAB7 /* DataWrapper.swift in Sources */,
+				005D3CFA2AC8B45800E4CAB7 /* UIView+Extension.swift in Sources */,
+				005D3CEF2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift in Sources */,
 				005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */,
 				005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */,
 				005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */,
@@ -650,6 +889,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		005D3CCB2AC8497F00E4CAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D3CDF2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift in Sources */,
+				005D3CDD2AC84A7F00E4CAB7 /* TeltechContacts.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -662,6 +910,11 @@
 			isa = PBXTargetDependency;
 			target = 005D3C5C2AC5EE8700E4CAB7 /* TeltechSpamKiller */;
 			targetProxy = 005D3C7E2AC5EE8800E4CAB7 /* PBXContainerItemProxy */;
+		};
+		005D3CD62AC8497F00E4CAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D3CCE2AC8497F00E4CAB7 /* TeltechSpamKillerData */;
+			targetProxy = 005D3CD52AC8497F00E4CAB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -789,8 +1042,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeltechSpamKiller/TeltechSpamKiller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PU98ZL5A45;
@@ -816,8 +1071,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeltechSpamKiller/TeltechSpamKiller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PU98ZL5A45;
@@ -917,6 +1174,79 @@
 			};
 			name = Release;
 		};
+		005D3CDA2AC8497F00E4CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		005D3CDB2AC8497F00E4CAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PU98ZL5A45;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trifunovicd.TeltechSpamKillerData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -956,7 +1286,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		005D3CD92AC8497F00E4CAB7 /* Build configuration list for PBXNativeTarget "TeltechSpamKillerData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D3CDA2AC8497F00E4CAB7 /* Debug */,
+				005D3CDB2AC8497F00E4CAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		005D3CC72AC842DC00E4CAB7 /* TeltechContacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				005D3CC82AC842DC00E4CAB7 /* TeltechContacts.xcdatamodel */,
+			);
+			currentVersion = 005D3CC82AC842DC00E4CAB7 /* TeltechContacts.xcdatamodel */;
+			path = TeltechContacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 005D3C552AC5EE8700E4CAB7 /* Project object */;
 }

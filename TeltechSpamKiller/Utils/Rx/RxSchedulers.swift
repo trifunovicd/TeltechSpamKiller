@@ -8,5 +8,5 @@
 import RxSwift
 
 public class RxSchedulers {
-    public static let concurentBackgroundScheduler = ConcurrentDispatchQueueScheduler(qos: .background)
+    static let concurentBackgroundScheduler = ConcurrentDispatchQueueScheduler(qos: .background)
 }

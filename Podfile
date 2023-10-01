@@ -7,6 +7,7 @@ target 'TeltechSpamKiller' do
 
   # Pods for TeltechSpamKiller
   pod 'Alamofire'
+  pod 'PhoneNumberKit'
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'RxSwift'

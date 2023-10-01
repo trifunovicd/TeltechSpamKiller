@@ -30,6 +30,7 @@ class RecentsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = navigationController?.tabBarItem.title
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
