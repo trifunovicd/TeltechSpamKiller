@@ -28,11 +28,14 @@ class BlockedViewModel: ViewModelType {
         let subscribeScheduler: SchedulerType
         let dataSource: BlockedDataSourcing
         weak var coordinatorDelegate: CoordinatorDelegate?
+        weak var addEditBlockedDelegate: AddEditBlockedDelegate?
     }
     
     var input: Input!
     var output: Output!
     let dependencies: Dependencies
+    
+    private var selectedContact: TeltechContact?
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -73,8 +76,19 @@ private extension BlockedViewModel {
         return subject
             .flatMap({ [unowned self] interactionType -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
                 switch interactionType {
+                case .addTapped:
+                    dependencies.addEditBlockedDelegate?.openAddEditBlockedScreen(name: nil, number: nil)
+                    return .just(output.screenData.value)
+                case .itemTapped(let indexPath):
+                    let contact = output.screenData.value[indexPath.section].items[indexPath.row].item
+                    selectedContact = contact
+                    let number = PhoneFormatService.shared.getFormattedPhoneString(number: contact.number)
+                    dependencies.addEditBlockedDelegate?.openAddEditBlockedScreen(name: contact.name, number: number)
+                    return .just(output.screenData.value)
                 case .itemAdded(let name, let number):
                     return dependencies.dataSource.addContact(output.screenData.value, name: name, number: number)
+                case .itemEdited(let name, let number):
+                    return dependencies.dataSource.editContact(output.screenData.value, name: name, number: number, contact: selectedContact)
                 case .itemDeleted(let indexPath):
                     return dependencies.dataSource.deleteContact(output.screenData.value, indexPath: indexPath)
                 }

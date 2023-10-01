@@ -28,7 +28,10 @@ final class BlockedCoordinator: NSObject, Coordinator {
 
 private extension BlockedCoordinator {
     func createBlockedController() -> BlockedViewController {
-        let dependencies = BlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, dataSource: BlockedDataSource(), coordinatorDelegate: self)
+        let dependencies = BlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, 
+                                                         dataSource: BlockedDataSource(),
+                                                         coordinatorDelegate: self,
+                                                         addEditBlockedDelegate: self)
         let viewModel = BlockedViewModel(dependencies: dependencies)
         let viewController = BlockedViewController(viewModel: viewModel)
         return viewController
@@ -43,5 +46,26 @@ extension BlockedCoordinator: CoordinatorDelegate, ParentCoordinatorDelegate {
     
     func childHasFinished(_ coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
+    }
+}
+
+extension BlockedCoordinator: AddEditBlockedDelegate {
+    func openAddEditBlockedScreen(name: String?, number: String?) {
+        let dependencies = AddEditBlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler,
+                                                                name: name,
+                                                                number: number,
+                                                                addEditBlockedDelegate: self)
+        let viewModel = AddEditBlockedViewModel(dependencies: dependencies)
+        let addEditScreen = AddEditBlockedViewController(viewModel: viewModel)
+        presenter.pushViewController(addEditScreen, animated: true)
+    }
+    
+    func saveContact(name: String?, number: Int64, isEditMode: Bool) {
+        if isEditMode {
+            controller.viewModel.input.userInteractionSubject.onNext(.itemEdited(name: name, number: number))
+        } else {
+            controller.viewModel.input.userInteractionSubject.onNext(.itemAdded(name: name, number: number))
+        }
+        presenter.popViewController(animated: true)
     }
 }

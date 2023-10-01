@@ -22,6 +22,8 @@ extension Erroring where Self: UIViewController {
                 switch value {
                 case .generalError:
                     presentAlert(title: R.string.localizable.general_error_title(), message: R.string.localizable.general_error_message())
+                case .parseError:
+                    presentAlert(title: R.string.localizable.parse_error_title(), message: R.string.localizable.parse_error_message())
                 }
             })
             .drive()

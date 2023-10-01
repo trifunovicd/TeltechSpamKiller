@@ -18,6 +18,7 @@ final class HomeContainerCoordinator: NSObject, Coordinator {
         self.presenter = presenter
         super.init()
         self.controller = createHomeContainerController()
+        self.applyTheme()
     }
     
     func start() {
@@ -28,7 +29,8 @@ final class HomeContainerCoordinator: NSObject, Coordinator {
 
 private extension HomeContainerCoordinator {
     func createHomeContainerController() -> HomeContainerViewController {
-        let dependencies = HomeContainerViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler)
+        let dependencies = HomeContainerViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, 
+                                                               teltechContactsRepository: TeltechContactsRepository())
         let viewModel = HomeContainerViewModel(dependencies: dependencies)
         let viewController = HomeContainerViewController(viewModel: viewModel)
         let recentsCoordinator = createRecentsCoordinator()
@@ -58,6 +60,29 @@ private extension HomeContainerCoordinator {
         let blockedCoordinator = BlockedCoordinator(presenter: navigationController)
         blockedCoordinator.parentCoordinatorDelegate = self
         return blockedCoordinator
+    }
+    
+    func applyTheme() {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.backgroundColor = UIColor.white
+        navigationBarAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
+        navigationBarAppearance.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = UIColor.white
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        if #available(iOS 15, *) {
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
     }
 }
 

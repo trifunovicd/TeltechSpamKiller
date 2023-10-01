@@ -25,10 +25,11 @@ class HomeContainerViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeVM()
+        viewModel.input.loadDataSubject.onNext(())
     }
 
     func initializeVM() {
-        let input = HomeContainerViewModel.Input()
+        let input = HomeContainerViewModel.Input(loadDataSubject: ReplaySubject.create(bufferSize: 1))
         let output = viewModel.transform(input: input)
         disposeBag.insert(output.disposables)
     }

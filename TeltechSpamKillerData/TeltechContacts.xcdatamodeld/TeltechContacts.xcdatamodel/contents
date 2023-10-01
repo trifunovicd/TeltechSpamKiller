@@ -3,6 +3,7 @@
     <entity name="TeltechContact" representedClassName="TeltechContact" syncable="YES" codeGenerationType="class">
         <attribute name="isBlocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isRemoved" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isUserAdded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

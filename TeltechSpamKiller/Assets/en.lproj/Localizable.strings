@@ -11,3 +11,8 @@
 "general_error_title" = "Error";
 "general_error_message" = "An error occurred.";
 "general_error_action" = "OK";
+"parse_error_title" = "Error";
+"parse_error_message" = "Can't read data.";
+"add_contact" = "Add contact";
+"edit_contact" = "Edit contact";
+"name_placeholder" = "Name";

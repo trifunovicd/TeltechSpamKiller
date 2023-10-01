@@ -8,6 +8,9 @@
 import Foundation
 
 enum BlockedInteractionType {
-    case itemAdded(name: String, number: Int64)
+    case addTapped
+    case itemTapped(_ indexPath: IndexPath)
+    case itemAdded(name: String?, number: Int64)
+    case itemEdited(name: String?, number: Int64)
     case itemDeleted(_ indexPath: IndexPath)
 }

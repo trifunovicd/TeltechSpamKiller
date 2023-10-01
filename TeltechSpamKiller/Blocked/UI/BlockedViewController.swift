@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 import RxSwift
 import RxCocoa
 import TeltechSpamKillerData
 
 class BlockedViewController: UIViewController, Loading, Erroring {
     let disposeBag = DisposeBag()
-    private let viewModel: BlockedViewModel
+    let viewModel: BlockedViewModel
     
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -22,6 +23,11 @@ class BlockedViewController: UIViewController, Loading, Erroring {
         view.registerCell(BlockedUITableViewCell.self)
         view.refreshControl = refreshControl
         return view
+    }()
+    
+    private lazy var addButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        return button
     }()
     
     lazy var refreshControl: UIRefreshControl? = {
@@ -68,13 +74,14 @@ class BlockedViewController: UIViewController, Loading, Erroring {
 
 private extension BlockedViewController {
     func setupUI() {
+        navigationItem.rightBarButtonItem = addButton
         view.addSubview(tableView)
         setConstraints()
     }
     
     func setConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.top.leading.trailing.bottom.equalToSuperview()
         }
     }
 }
@@ -97,6 +104,7 @@ private extension BlockedViewController {
     
     func observeInputs() {
         subscribeToPullToRefresh()
+        subscribeToTapAction()
         subscribeToDeleteAction()
     }
     
@@ -108,11 +116,23 @@ private extension BlockedViewController {
         .disposed(by: disposeBag)
     }
     
+    func subscribeToTapAction() {
+        tableView.rx.itemSelected
+        .subscribe(onNext: { [unowned self] in
+            viewModel.input.userInteractionSubject.onNext(.itemTapped($0))
+        })
+        .disposed(by: disposeBag)
+    }
+    
     func subscribeToDeleteAction() {
         tableView.rx.itemDeleted
         .subscribe(onNext: { [unowned self] in
             viewModel.input.userInteractionSubject.onNext(.itemDeleted($0))
         })
         .disposed(by: disposeBag)
+    }
+    
+    @objc func addTapped() {
+        viewModel.input.userInteractionSubject.onNext(.addTapped)
     }
 }
