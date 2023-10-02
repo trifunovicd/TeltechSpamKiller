@@ -8,7 +8,7 @@
 import Foundation
 import RxDataSources
 
-class IdentifiableRowItem<DataType>: IdentifiableType, Equatable {
+public class IdentifiableRowItem<DataType>: IdentifiableType, Equatable {
     public let identity: String
     public var item: DataType
     
@@ -17,7 +17,7 @@ class IdentifiableRowItem<DataType>: IdentifiableType, Equatable {
         self.item = item
     }
     
-    static func == (lhs: IdentifiableRowItem<DataType>, rhs: IdentifiableRowItem<DataType>) -> Bool {
+    public static func == (lhs: IdentifiableRowItem<DataType>, rhs: IdentifiableRowItem<DataType>) -> Bool {
         lhs.identity == rhs.identity
     }
 }

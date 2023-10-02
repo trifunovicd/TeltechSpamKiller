@@ -15,7 +15,7 @@ protocol ContactPickerDelegate: AnyObject {
     func saveContact(name: String?, number: Int64)
 }
 
-class ContactPickerViewController: UIViewController, Loading, Erroring {
+final class ContactPickerViewController: UIViewController, Loading, Erroring {
     let disposeBag = DisposeBag()
     let viewModel: ContactPickerViewModel
     var refreshControl: UIRefreshControl?
@@ -100,8 +100,8 @@ private extension ContactPickerViewController {
     
     func subscribeToTapAction() {
         tableView.rx.itemSelected
-        .subscribe(onNext: { [unowned self] in
-            viewModel.input.userInteractionSubject.onNext(.itemTapped($0))
+        .subscribe(onNext: { [weak self] in
+            self?.viewModel.input.userInteractionSubject.onNext(.itemTapped($0))
         })
         .disposed(by: disposeBag)
     }

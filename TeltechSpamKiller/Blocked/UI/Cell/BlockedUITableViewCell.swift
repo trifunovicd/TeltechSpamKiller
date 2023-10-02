@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import TeltechSpamKillerData
 
-class BlockedUITableViewCell: UITableViewCell {
+final class BlockedUITableViewCell: UITableViewCell {
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()

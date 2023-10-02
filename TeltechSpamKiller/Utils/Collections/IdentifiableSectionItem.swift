@@ -8,7 +8,7 @@
 import Foundation
 import RxDataSources
 
-struct IdentifiableSectionItem<DataType>: IdentifiableType, AnimatableSectionModelType, Equatable {
+public struct IdentifiableSectionItem<DataType>: IdentifiableType, AnimatableSectionModelType, Equatable {
     public typealias Element = IdentifiableRowItem<DataType>
     
     public let identity: String
@@ -19,12 +19,12 @@ struct IdentifiableSectionItem<DataType>: IdentifiableType, AnimatableSectionMod
         self.items = items
     }
     
-    init(original: IdentifiableSectionItem<DataType>, items: [IdentifiableRowItem<DataType>]) {
+    public init(original: IdentifiableSectionItem<DataType>, items: [IdentifiableRowItem<DataType>]) {
         self = original
         self.items = items
     }
     
-    static func == (lhs: IdentifiableSectionItem<DataType>, rhs: IdentifiableSectionItem<DataType>) -> Bool {
+    public static func == (lhs: IdentifiableSectionItem<DataType>, rhs: IdentifiableSectionItem<DataType>) -> Bool {
         lhs.identity == rhs.identity
     }
 }

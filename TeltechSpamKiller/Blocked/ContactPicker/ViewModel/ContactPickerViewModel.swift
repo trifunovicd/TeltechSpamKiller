@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import TeltechSpamKillerData
 
-class ContactPickerViewModel: ViewModelType {
+final class ContactPickerViewModel: ViewModelType {
     
     struct Input {
         let loadDataSubject: ReplaySubject<()>

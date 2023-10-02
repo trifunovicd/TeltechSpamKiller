@@ -21,7 +21,7 @@ protocol BlockedDataSourcing {
     func fetchBlockedContacts() -> Single<[TeltechContact]>
 }
 
-class BlockedDataSource: BlockedDataSourcing {
+final class BlockedDataSource: BlockedDataSourcing {
     var dataManager: TeltechSpamKillerDataManager
     var contactsRepository: TeltechContactsRepositoring
     
@@ -90,7 +90,11 @@ class BlockedDataSource: BlockedDataSourcing {
     
     func fetchBlockedContacts() -> Single<[TeltechContact]> {
         return Single<[TeltechContact]>
-            .create { [unowned self] single -> Disposable in
+            .create { [weak self] single -> Disposable in
+                guard let self = self else {
+                    single(.failure(NetworkError.generalError))
+                    return Disposables.create()
+                }
                 do {
                     let contactsRequest: NSFetchRequest<TeltechContact> = dataManager.fetchRequest(blocked: true)
                     let contacts = try dataManager.context.fetch(contactsRequest)
@@ -133,7 +137,7 @@ private extension BlockedDataSource {
     
     func handleContactsResponse(_ response: TeltechContactResponse) -> Single<()> {
         return Single<()>
-            .create { [unowned self] single -> Disposable in
+            .create { [weak self] single -> Disposable in
                 var contactsToIdentify: [Int64] = []
                 var contactsToBlock: [Int64] = []
                 
@@ -151,11 +155,11 @@ private extension BlockedDataSource {
                     }
                 }
                 
-                dataManager.updateIdentificationContacts(contactsToIdentify)
-                dataManager.updateBlockedContacts(contactsToBlock)
+                self?.dataManager.updateIdentificationContacts(contactsToIdentify)
+                self?.dataManager.updateBlockedContacts(contactsToBlock)
                 
-                dataManager.saveContext()
-                dataManager.reloadExtension()
+                self?.dataManager.saveContext()
+                self?.dataManager.reloadExtension()
                 
                 single(.success(()))
                 return Disposables.create()

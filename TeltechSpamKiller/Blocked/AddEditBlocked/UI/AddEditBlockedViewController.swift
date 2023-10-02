@@ -16,7 +16,7 @@ protocol AddEditBlockedDelegate: AnyObject {
     func saveContact(name: String?, number: Int64, isEditMode: Bool)
 }
 
-class AddEditBlockedViewController: UIViewController, Loading, Erroring {
+final class AddEditBlockedViewController: UIViewController, Loading, Erroring {
     let disposeBag = DisposeBag()
     let viewModel: AddEditBlockedViewModel
     var refreshControl: UIRefreshControl?
@@ -42,7 +42,7 @@ class AddEditBlockedViewController: UIViewController, Loading, Erroring {
     }()
     
     private lazy var saveButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+        let button = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
         return button
     }()
     
@@ -105,10 +105,9 @@ private extension AddEditBlockedViewController {
     func observeScreenData(for relay: BehaviorRelay<(String?, String?)>) {
         relay
             .asDriver(onErrorJustReturn: (nil, nil))
-            .do(onNext: { [weak self] (name, number) in
-                guard let self = self else { return }
-                self.nameInputView.text = name
-                self.numberInputView.setTextUnformatted(newValue: number)
+            .do(onNext: { [unowned self] (name, number) in
+                nameInputView.text = name
+                numberInputView.setTextUnformatted(newValue: number)
             })
             .drive()
             .disposed(by: disposeBag)
@@ -116,7 +115,15 @@ private extension AddEditBlockedViewController {
     
     func observeInputs() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewTapped)))
-        
+        subscribeToTextInputs()
+        subscribeToSaveAction()
+    }
+    
+    @objc func viewTapped() {
+        view.endEditing(true)
+    }
+    
+    func subscribeToTextInputs() {
         let nameObservable = nameInputView.rx.text.orEmpty.distinctUntilChanged().asObservable()
         let numberObservable = numberInputView.rx.text.orEmpty.distinctUntilChanged().asObservable()
         Observable.combineLatest(nameObservable, numberObservable).subscribe(onNext: { [weak self] _ in
@@ -125,11 +132,10 @@ private extension AddEditBlockedViewController {
         }).disposed(by: disposeBag)
     }
     
-    @objc func viewTapped() {
-        view.endEditing(true)
-    }
-    
-    @objc func saveTapped() {
-        viewModel.input.userInteractionSubject.onNext(.saveItem(name: nameInputView.text, phoneNumber: numberInputView.phoneNumber))
+    func subscribeToSaveAction() {
+        saveButton.rx.tap.subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.input.userInteractionSubject.onNext(.saveItem(name: self.nameInputView.text, phoneNumber: self.numberInputView.phoneNumber))
+        }).disposed(by: disposeBag)
     }
 }

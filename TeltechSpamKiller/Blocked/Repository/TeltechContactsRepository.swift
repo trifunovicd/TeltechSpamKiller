@@ -14,7 +14,7 @@ protocol TeltechContactsRepositoring {
     func getContacts() -> Single<TeltechContactResponse>
 }
 
-class TeltechContactsRepository: TeltechContactsRepositoring {
+final class TeltechContactsRepository: TeltechContactsRepositoring {
     var apiClient: APIClient
     
     init(apiClient: APIClient = APIClient.shared) {

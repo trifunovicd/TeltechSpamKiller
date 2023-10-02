@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import TeltechSpamKillerData
 
-class BlockedViewController: UIViewController, Loading, Erroring {
+final class BlockedViewController: UIViewController, Loading, Erroring {
     let disposeBag = DisposeBag()
     let viewModel: BlockedViewModel
     
@@ -119,37 +119,37 @@ private extension BlockedViewController {
     }
     
     func subscribeToContactsAction() {
-        contactsButton.rx.tap.subscribe(onNext: { [unowned self] in
-            viewModel.input.userInteractionSubject.onNext(.contactsTapped)
+        contactsButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.viewModel.input.userInteractionSubject.onNext(.contactsTapped)
         }).disposed(by: disposeBag)
     }
     
     func subscribeToAddAction() {
-        addButton.rx.tap.subscribe(onNext: { [unowned self] in
-            viewModel.input.userInteractionSubject.onNext(.addTapped)
+        addButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.viewModel.input.userInteractionSubject.onNext(.addTapped)
         }).disposed(by: disposeBag)
     }
     
     func subscribeToPullToRefreshAction() {
         tableView.refreshControl?.rx.controlEvent(.valueChanged)
-        .subscribe(onNext: { [unowned self] in
-            viewModel.input.loadDataSubject.onNext(.pullToRefresh)
+        .subscribe(onNext: { [weak self] in
+            self?.viewModel.input.loadDataSubject.onNext(.pullToRefresh)
         })
         .disposed(by: disposeBag)
     }
     
     func subscribeToTapAction() {
         tableView.rx.itemSelected
-        .subscribe(onNext: { [unowned self] in
-            viewModel.input.userInteractionSubject.onNext(.itemTapped($0))
+        .subscribe(onNext: { [weak self] in
+            self?.viewModel.input.userInteractionSubject.onNext(.itemTapped($0))
         })
         .disposed(by: disposeBag)
     }
     
     func subscribeToDeleteAction() {
         tableView.rx.itemDeleted
-        .subscribe(onNext: { [unowned self] in
-            viewModel.input.userInteractionSubject.onNext(.itemDeleted($0))
+        .subscribe(onNext: { [weak self] in
+            self?.viewModel.input.userInteractionSubject.onNext(.itemDeleted($0))
         })
         .disposed(by: disposeBag)
     }

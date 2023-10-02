@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextField: UITextField {
+public class TextField: UITextField {
     let insets: UIEdgeInsets
     
     init(_ insets: UIEdgeInsets = .zero) {

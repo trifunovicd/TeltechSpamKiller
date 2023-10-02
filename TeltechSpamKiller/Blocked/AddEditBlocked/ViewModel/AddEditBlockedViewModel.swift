@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import PhoneNumberKit
 
-class AddEditBlockedViewModel: ViewModelType {
+final class AddEditBlockedViewModel: ViewModelType {
     
     struct Input {
         var loadDataSubject: ReplaySubject<()>

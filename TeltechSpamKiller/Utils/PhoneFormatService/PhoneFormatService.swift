@@ -8,7 +8,7 @@
 import Foundation
 import PhoneNumberKit
 
-class PhoneFormatService {
+public class PhoneFormatService {
     static let shared = PhoneFormatService()
     private let phoneNumberKit = PhoneNumberKit()
     

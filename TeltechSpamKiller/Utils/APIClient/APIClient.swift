@@ -21,11 +21,11 @@ public class APIClient {
     }()
     
     func performRequest<T: Decodable>(_ url: String) -> Single<T> {
-        return Single<T>.create { [unowned self] single -> Disposable in
+        return Single<T>.create { [weak self] single -> Disposable in
             
             guard let bundlePath = Bundle.main.path(forResource: url, ofType: "json"),
                   let jsonData = try? String(contentsOfFile: bundlePath).data(using: .utf8),
-                  let decodedData = try? decoder.decode(T.self, from: jsonData) else {
+                  let decodedData = try? self?.decoder.decode(T.self, from: jsonData) else {
                 
                 single(.failure(NetworkError.parseError))
                 return Disposables.create()

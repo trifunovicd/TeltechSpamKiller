@@ -68,11 +68,11 @@ public final class TeltechSpamKillerDataManager {
     }
     
     public func reloadExtension() {
-        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: Constants.extensionIdentifier, completionHandler: { [unowned self] (error) in
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: Constants.extensionIdentifier, completionHandler: { [weak self] (error) in
             if let error = error {
                 print("Error reloading extension: \(error.localizedDescription)")
             } else {
-                deleteRemovedContacts()
+                self?.deleteRemovedContacts()
             }
         })
     }

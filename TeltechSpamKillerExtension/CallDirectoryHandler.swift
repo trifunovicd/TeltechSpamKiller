@@ -10,7 +10,7 @@ import CallKit
 import CoreData
 import TeltechSpamKillerData
 
-class CallDirectoryHandler: CXCallDirectoryProvider {
+final class CallDirectoryHandler: CXCallDirectoryProvider {
     
     private let dataManager = TeltechSpamKillerDataManager.shared
     

@@ -23,9 +23,9 @@ extension Loading where Self: UIViewController {
             .asDriver(onErrorJustReturn: false)
             .do(onNext: { [unowned self] (showLoader) in
                 if showLoader {
-                    self.showLoadingView()
+                    showLoadingView()
                 } else {
-                    self.hideLoadingView()
+                    hideLoadingView()
                 }
             })
             .drive()

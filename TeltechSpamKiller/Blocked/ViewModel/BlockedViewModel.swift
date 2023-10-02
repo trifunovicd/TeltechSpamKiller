@@ -11,7 +11,7 @@ import RxCocoa
 import CallKit
 import TeltechSpamKillerData
 
-class BlockedViewModel: ViewModelType {
+final class BlockedViewModel: ViewModelType {
     
     struct Input {
         let checkExtensionSubject: ReplaySubject<()>

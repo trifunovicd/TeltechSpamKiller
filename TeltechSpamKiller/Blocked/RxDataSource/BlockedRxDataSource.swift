@@ -9,7 +9,7 @@ import Foundation
 import RxDataSources
 import TeltechSpamKillerData
 
-class BlockedRxDataSource {
+final class BlockedRxDataSource {
     typealias DataSource = RxTableViewSectionedAnimatedDataSource
     
     static func dataSource() -> DataSource<IdentifiableSectionItem<TeltechContact>> {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contact: Equatable {
+public struct Contact: Equatable {
     let firstName: String
     let middleName: String
     let lastName: String

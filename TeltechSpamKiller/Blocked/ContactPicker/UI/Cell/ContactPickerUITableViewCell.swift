@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactPickerUITableViewCell: UITableViewCell {
+final class ContactPickerUITableViewCell: UITableViewCell {
     
     private lazy var nameInitialView: UIView = {
         let view = UIView()
@@ -71,7 +71,7 @@ private extension ContactPickerUITableViewCell {
             make.center.equalToSuperview()
         }
         
-        nameLabel.snp.remakeConstraints { make in
+        nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(nameInitialView.snp.trailing).offset(12)
             make.top.greaterThanOrEqualToSuperview().inset(12)
             make.bottom.lessThanOrEqualToSuperview().inset(12)
