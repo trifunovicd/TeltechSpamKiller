@@ -16,11 +16,11 @@ public final class TeltechSpamKillerDataManager {
     private init() {}
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let momdName = "TeltechContacts"
-        let groupName = "group.com.trifunovicd.TeltechSpamKiller"
-        let fileName = "demo.sqlite"
+        let databaseName = Constants.databaseName
+        let groupName = Constants.groupName
+        let fileName = Constants.fileName
         
-        guard let modelURL = Bundle(for: type(of: self)).url(forResource: momdName, withExtension:"momd") else {
+        guard let modelURL = Bundle(for: type(of: self)).url(forResource: databaseName, withExtension: "momd") else {
             fatalError("Error loading model from bundle")
         }
         
@@ -34,7 +34,7 @@ public final class TeltechSpamKillerDataManager {
         
         let storeUrl = baseURL.appendingPathComponent(fileName)
         
-        let container = NSPersistentContainer(name: momdName, managedObjectModel: mom)
+        let container = NSPersistentContainer(name: databaseName, managedObjectModel: mom)
         
         let description = NSPersistentStoreDescription()
         
@@ -68,8 +68,7 @@ public final class TeltechSpamKillerDataManager {
     }
     
     public func reloadExtension() {
-        let identifier = "com.trifunovicd.TeltechSpamKiller.TeltechSpamKillerExtension"
-        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: identifier, completionHandler: { [unowned self] (error) in
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: Constants.extensionIdentifier, completionHandler: { [unowned self] (error) in
             if let error = error {
                 print("Error reloading extension: \(error.localizedDescription)")
             } else {
@@ -117,7 +116,7 @@ public final class TeltechSpamKillerDataManager {
         
         contactsToAdd.forEach { contactNumber in
             let contact = TeltechContact(context: context)
-            contact.name = "Suspicious Caller"
+            contact.name = Constants.suspiciousCaller
             contact.number = contactNumber
             contact.isBlocked = false
             contact.isRemoved = false

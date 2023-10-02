@@ -19,6 +19,7 @@
 		0058C9202ACB406300D223C0 /* ContactPickerInteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C91F2ACB406300D223C0 /* ContactPickerInteractionType.swift */; };
 		0058C9232ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9222ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift */; };
 		0058C9262ACB56B700D223C0 /* ContactPickerRxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9252ACB56B700D223C0 /* ContactPickerRxDataSource.swift */; };
+		0058C9282ACB663200D223C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9272ACB663200D223C0 /* Constants.swift */; };
 		005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */; };
 		005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */; };
 		005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */; };
@@ -144,6 +145,7 @@
 		0058C91F2ACB406300D223C0 /* ContactPickerInteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerInteractionType.swift; sourceTree = "<group>"; };
 		0058C9222ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerUITableViewCell.swift; sourceTree = "<group>"; };
 		0058C9252ACB56B700D223C0 /* ContactPickerRxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerRxDataSource.swift; sourceTree = "<group>"; };
+		0058C9272ACB663200D223C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechSpamKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */,
 				005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */,
 				005D3D1F2AC96CD000E4CAB7 /* UserDefaultsStorage.swift */,
+				0058C9272ACB663200D223C0 /* Constants.swift */,
 			);
 			path = TeltechSpamKillerData;
 			sourceTree = "<group>";
@@ -1086,6 +1089,7 @@
 				005D3CDF2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift in Sources */,
 				005D3D212AC96DF100E4CAB7 /* UserDefaultsStorage.swift in Sources */,
 				005D3CDD2AC84A7F00E4CAB7 /* TeltechContacts.xcdatamodeld in Sources */,
+				0058C9282ACB663200D223C0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

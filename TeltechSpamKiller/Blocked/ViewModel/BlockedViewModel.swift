@@ -65,8 +65,7 @@ private extension BlockedViewModel {
             .observe(on: MainScheduler.instance)
             .subscribe(on: dependencies.subscribeScheduler)
             .subscribe(onNext: { [unowned self] _ in
-                let identifier = "com.trifunovicd.TeltechSpamKiller.TeltechSpamKillerExtension"
-                CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: identifier) { [weak self] status, error in
+                CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: Constants.extensionIdentifier) { [weak self] status, error in
                     if let error = error {
                         print("Error checking extension: \(error.localizedDescription)")
                     }
