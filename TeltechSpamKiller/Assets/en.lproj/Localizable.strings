@@ -6,7 +6,6 @@
   
 */
 
-"recents" = "Recents";
 "blocked" = "Blocked";
 "general_error_title" = "Error";
 "general_error_message" = "An error occurred.";
@@ -15,6 +14,7 @@
 "parse_error_message" = "Can't read data.";
 "add_contact" = "Add contact";
 "edit_contact" = "Edit contact";
+"select_contact" = "Select contact";
 "name_placeholder" = "Name";
 "call_directory_extension_error_title" = "Call directory error";
 "call_directory_extension_error_message" = "Call extension is disabled. To enable it, please go to Settings -> Phone -> Call Blocking & Identification.";

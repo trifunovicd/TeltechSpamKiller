@@ -18,6 +18,7 @@ protocol BlockedDataSourcing {
     func addContact(_ data: [IdentifiableSectionItem<TeltechContact>], name: String?, number: Int64) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
     func editContact(_ data: [IdentifiableSectionItem<TeltechContact>], name: String?, number: Int64, contact: TeltechContact?) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
     func deleteContact(_ data: [IdentifiableSectionItem<TeltechContact>], indexPath: IndexPath) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
+    func fetchBlockedContacts() -> Single<[TeltechContact]>
 }
 
 class BlockedDataSource: BlockedDataSourcing {
@@ -86,16 +87,6 @@ class BlockedDataSource: BlockedDataSourcing {
         modifiedData[indexPath.section].items.remove(at: indexPath.row)
         return .just(modifiedData)
     }
-}
-
-private extension BlockedDataSource {
-    func fetchOfflineData() -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
-        return fetchBlockedContacts()
-            .asObservable()
-            .flatMap { [unowned self] contacts -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
-                return .just(createScreenData(contacts))
-            }
-    }
     
     func fetchBlockedContacts() -> Single<[TeltechContact]> {
         return Single<[TeltechContact]>
@@ -108,6 +99,16 @@ private extension BlockedDataSource {
                     single(.failure(error))
                 }
                 return Disposables.create()
+            }
+    }
+}
+
+private extension BlockedDataSource {
+    func fetchOfflineData() -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
+        return fetchBlockedContacts()
+            .asObservable()
+            .flatMap { [unowned self] contacts -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
+                return .just(createScreenData(contacts))
             }
     }
     

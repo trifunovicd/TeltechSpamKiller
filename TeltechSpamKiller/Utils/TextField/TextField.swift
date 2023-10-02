@@ -37,7 +37,7 @@ extension UITextField {
         textColor = .black
         tintColor = .black
         backgroundColor = .white
-        font = .systemFont(ofSize: 24, weight: .medium)
+        font = .systemFont(ofSize: 20, weight: .medium)
         layer.cornerRadius = 12
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor

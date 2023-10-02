@@ -31,6 +31,7 @@ class BlockedViewModel: ViewModelType {
         let dataSource: BlockedDataSourcing
         weak var coordinatorDelegate: CoordinatorDelegate?
         weak var addEditBlockedDelegate: AddEditBlockedDelegate?
+        weak var contactPickerDelegate: ContactPickerDelegate?
     }
     
     var input: Input!
@@ -98,6 +99,9 @@ private extension BlockedViewModel {
         return subject
             .flatMap({ [unowned self] interactionType -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
                 switch interactionType {
+                case .contactsTapped:
+                    dependencies.contactPickerDelegate?.openContactPickerScreen()
+                    return .just(output.screenData.value)
                 case .addTapped:
                     dependencies.addEditBlockedDelegate?.openAddEditBlockedScreen(name: nil, number: nil)
                     return .just(output.screenData.value)

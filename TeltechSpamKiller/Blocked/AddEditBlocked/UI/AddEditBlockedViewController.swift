@@ -81,14 +81,12 @@ private extension AddEditBlockedViewController {
     func setupConstraints() {
         nameInputView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
-            make.height.equalTo(62)
         }
         
         numberInputView.snp.makeConstraints { make in
             make.top.equalTo(nameInputView.snp.bottom).offset(16)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
             make.bottom.lessThanOrEqualToSuperview()
-            make.height.equalTo(62)
         }
     }
 }

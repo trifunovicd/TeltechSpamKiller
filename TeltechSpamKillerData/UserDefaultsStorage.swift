@@ -10,6 +10,8 @@ import Foundation
 public class UserDefaultsStorage {
     public static let shared = UserDefaultsStorage()
     
+    private init() {}
+    
     private let userDefaults = UserDefaults.standard
     private let lastUpdatedKey = "lastUpdated"
     

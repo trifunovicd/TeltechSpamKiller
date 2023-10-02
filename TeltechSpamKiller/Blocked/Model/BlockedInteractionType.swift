@@ -8,6 +8,7 @@
 import Foundation
 
 enum BlockedInteractionType {
+    case contactsTapped
     case addTapped
     case itemTapped(_ indexPath: IndexPath)
     case itemUpdated(name: String?, number: Int64, isEditMode: Bool)

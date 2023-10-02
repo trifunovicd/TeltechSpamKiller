@@ -12,6 +12,13 @@
 		0016F6CE2AC9DB4400617407 /* AddEditBlockedInteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016F6CD2AC9DB4400617407 /* AddEditBlockedInteractionType.swift */; };
 		0016F6D22AC9E1EF00617407 /* PhoneFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016F6D12AC9E1EF00617407 /* PhoneFormatService.swift */; };
 		0016F6D52AC9F01E00617407 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016F6D42AC9F01E00617407 /* TextField.swift */; };
+		0058C9152ACB396800D223C0 /* ContactPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9142ACB396800D223C0 /* ContactPickerViewController.swift */; };
+		0058C9172ACB39E900D223C0 /* ContactPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9162ACB39E900D223C0 /* ContactPickerViewModel.swift */; };
+		0058C91A2ACB3AB700D223C0 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9192ACB3AB700D223C0 /* ContactService.swift */; };
+		0058C91D2ACB3B0300D223C0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C91C2ACB3B0300D223C0 /* Contact.swift */; };
+		0058C9202ACB406300D223C0 /* ContactPickerInteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C91F2ACB406300D223C0 /* ContactPickerInteractionType.swift */; };
+		0058C9232ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9222ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift */; };
+		0058C9262ACB56B700D223C0 /* ContactPickerRxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058C9252ACB56B700D223C0 /* ContactPickerRxDataSource.swift */; };
 		005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */; };
 		005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */; };
 		005D3C6A2AC5EE8800E4CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005D3C692AC5EE8800E4CAB7 /* Assets.xcassets */; };
@@ -130,6 +137,13 @@
 		0016F6CD2AC9DB4400617407 /* AddEditBlockedInteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBlockedInteractionType.swift; sourceTree = "<group>"; };
 		0016F6D12AC9E1EF00617407 /* PhoneFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatService.swift; sourceTree = "<group>"; };
 		0016F6D42AC9F01E00617407 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0058C9142ACB396800D223C0 /* ContactPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewController.swift; sourceTree = "<group>"; };
+		0058C9162ACB39E900D223C0 /* ContactPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewModel.swift; sourceTree = "<group>"; };
+		0058C9192ACB3AB700D223C0 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
+		0058C91C2ACB3B0300D223C0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		0058C91F2ACB406300D223C0 /* ContactPickerInteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerInteractionType.swift; sourceTree = "<group>"; };
+		0058C9222ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerUITableViewCell.swift; sourceTree = "<group>"; };
+		0058C9252ACB56B700D223C0 /* ContactPickerRxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerRxDataSource.swift; sourceTree = "<group>"; };
 		005D3C5D2AC5EE8700E4CAB7 /* TeltechSpamKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechSpamKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +298,47 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		0058C9182ACB3AA700D223C0 /* ContactService */ = {
+			isa = PBXGroup;
+			children = (
+				0058C91B2ACB3AEC00D223C0 /* Model */,
+				0058C9192ACB3AB700D223C0 /* ContactService.swift */,
+			);
+			path = ContactService;
+			sourceTree = "<group>";
+		};
+		0058C91B2ACB3AEC00D223C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0058C91C2ACB3B0300D223C0 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0058C91E2ACB404900D223C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0058C91F2ACB406300D223C0 /* ContactPickerInteractionType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0058C9212ACB4F7B00D223C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0058C9222ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0058C9242ACB558100D223C0 /* RxDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0058C9252ACB56B700D223C0 /* ContactPickerRxDataSource.swift */,
+			);
+			path = RxDataSource;
+			sourceTree = "<group>";
+		};
 		005D3C542AC5EE8700E4CAB7 = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +436,7 @@
 		005D3CAC2AC6AAEE00E4CAB7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0058C9182ACB3AA700D223C0 /* ContactService */,
 				0016F6D32AC9F00F00617407 /* TextField */,
 				0016F6D02AC9E1DB00617407 /* PhoneFormatService */,
 				005D3D302AC99E2A00E4CAB7 /* Constants */,
@@ -399,6 +455,7 @@
 		005D3CB92AC6D59500E4CAB7 /* Blocked */ = {
 			isa = PBXGroup;
 			children = (
+				00E6C5EC2ACB33B4001C54AA /* ContactPicker */,
 				0016F6C62AC9B73400617407 /* AddEditBlocked */,
 				005D3CFD2AC8C7ED00E4CAB7 /* Model */,
 				005D3D252AC9945400E4CAB7 /* Repository */,
@@ -574,6 +631,34 @@
 				005D3D292AC9988700E4CAB7 /* teltech_contacts.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		00E6C5EC2ACB33B4001C54AA /* ContactPicker */ = {
+			isa = PBXGroup;
+			children = (
+				0058C91E2ACB404900D223C0 /* Model */,
+				0058C9242ACB558100D223C0 /* RxDataSource */,
+				00E6C5EE2ACB3533001C54AA /* ViewModel */,
+				00E6C5ED2ACB352C001C54AA /* UI */,
+			);
+			path = ContactPicker;
+			sourceTree = "<group>";
+		};
+		00E6C5ED2ACB352C001C54AA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0058C9212ACB4F7B00D223C0 /* Cell */,
+				0058C9142ACB396800D223C0 /* ContactPickerViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		00E6C5EE2ACB3533001C54AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0058C9162ACB39E900D223C0 /* ContactPickerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8714C457CE3F6D8887763194 /* Pods */ = {
@@ -941,23 +1026,29 @@
 				00E6C5EB2ACB22BF001C54AA /* BlockedLoadType.swift in Sources */,
 				005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */,
 				0016F6CC2AC9DAB300617407 /* AddEditBlockedViewModel.swift in Sources */,
+				0058C9232ACB4F9100D223C0 /* ContactPickerUITableViewCell.swift in Sources */,
 				0016F6CE2AC9DB4400617407 /* AddEditBlockedInteractionType.swift in Sources */,
 				005D3CFF2AC8C81E00E4CAB7 /* BlockedInteractionType.swift in Sources */,
 				005D3CAB2AC6A4BE00E4CAB7 /* RxSchedulers.swift in Sources */,
 				005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */,
 				005D3CE32AC8621E00E4CAB7 /* BlockedDataSource.swift in Sources */,
+				0058C9172ACB39E900D223C0 /* ContactPickerViewModel.swift in Sources */,
 				0016F6D22AC9E1EF00617407 /* PhoneFormatService.swift in Sources */,
 				005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */,
 				005D3D022AC8E89400E4CAB7 /* Loading.swift in Sources */,
 				005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */,
 				0016F6D52AC9F01E00617407 /* TextField.swift in Sources */,
 				005D3CF42AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift in Sources */,
+				0058C91D2ACB3B0300D223C0 /* Contact.swift in Sources */,
 				0016F6CA2AC9BA2F00617407 /* AddEditBlockedViewController.swift in Sources */,
+				0058C91A2ACB3AB700D223C0 /* ContactService.swift in Sources */,
 				005D3D072AC9001B00E4CAB7 /* Erroring.swift in Sources */,
 				005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */,
 				005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */,
 				005D3D2C2AC99C6F00E4CAB7 /* TeltechContactsRepository.swift in Sources */,
 				005D3D2F2AC99CE200E4CAB7 /* TeltechContactResponse.swift in Sources */,
+				0058C9152ACB396800D223C0 /* ContactPickerViewController.swift in Sources */,
+				0058C9202ACB406300D223C0 /* ContactPickerInteractionType.swift in Sources */,
 				005D3CFC2AC8B9D600E4CAB7 /* UITableView+Extension.swift in Sources */,
 				005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */,
 				005D3CE92AC89DCC00E4CAB7 /* OutputViewModeling.swift in Sources */,
@@ -965,6 +1056,7 @@
 				005D3CEF2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift in Sources */,
 				005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */,
 				005D3C612AC5EE8700E4CAB7 /* AppDelegate.swift in Sources */,
+				0058C9262ACB56B700D223C0 /* ContactPickerRxDataSource.swift in Sources */,
 				005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */,
 				005D3C632AC5EE8700E4CAB7 /* SceneDelegate.swift in Sources */,
 			);
@@ -1179,6 +1271,7 @@
 				DEVELOPMENT_TEAM = PU98ZL5A45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "By accessing your contacts, the app can easily add contact to the list of blocked contacts.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1208,6 +1301,7 @@
 				DEVELOPMENT_TEAM = PU98ZL5A45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeltechSpamKiller/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "By accessing your contacts, the app can easily add contact to the list of blocked contacts.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

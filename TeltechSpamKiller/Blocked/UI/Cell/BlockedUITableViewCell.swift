@@ -5,7 +5,7 @@
 //  Created by DTech on 30.09.2023..
 //
 
-import Foundation
+import UIKit
 import SnapKit
 import TeltechSpamKillerData
 
@@ -14,7 +14,7 @@ class BlockedUITableViewCell: UITableViewCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         label.numberOfLines = 0
         return label
     }()
@@ -46,7 +46,7 @@ class BlockedUITableViewCell: UITableViewCell {
             nameExist = true
         } else {
             nameLabel.text = nil
-            numberLabel.font = .boldSystemFont(ofSize: 20)
+            numberLabel.font = .boldSystemFont(ofSize: 18)
             nameExist = false
         }
         updateConstraints(nameExist: nameExist)
@@ -64,11 +64,14 @@ private extension BlockedUITableViewCell {
     
     func setConstraints() {
         nameLabel.snp.remakeConstraints { make in
-            make.top.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().offset(12)
+            make.leading.trailing.equalToSuperview().inset(16)
         }
+        
         numberLabel.snp.remakeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).offset(10)
-            make.leading.trailing.bottom.equalToSuperview().inset(16)
+            make.top.equalTo(nameLabel.snp.bottom).offset(5)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview().inset(12)
         }
     }
     
@@ -81,7 +84,7 @@ private extension BlockedUITableViewCell {
         } else {
             nameLabel.removeFromSuperview()
             numberLabel.snp.remakeConstraints { make in
-                make.top.bottom.leading.trailing.equalToSuperview().inset(16)
+                make.top.bottom.leading.trailing.equalToSuperview().inset(12)
             }
         }
     }

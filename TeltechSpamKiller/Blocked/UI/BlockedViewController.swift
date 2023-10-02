@@ -25,8 +25,13 @@ class BlockedViewController: UIViewController, Loading, Erroring {
         return view
     }()
     
+    private lazy var contactsButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.plus"), style: .plain, target: self, action: nil)
+        return button
+    }()
+    
     private lazy var addButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         return button
     }()
     
@@ -75,6 +80,7 @@ class BlockedViewController: UIViewController, Loading, Erroring {
 
 private extension BlockedViewController {
     func setupUI() {
+        navigationItem.leftBarButtonItem = contactsButton
         navigationItem.rightBarButtonItem = addButton
         view.addSubview(tableView)
         setConstraints()
@@ -105,12 +111,26 @@ private extension BlockedViewController {
     }
     
     func observeInputs() {
-        subscribeToPullToRefresh()
+        subscribeToContactsAction()
+        subscribeToAddAction()
+        subscribeToPullToRefreshAction()
         subscribeToTapAction()
         subscribeToDeleteAction()
     }
     
-    func subscribeToPullToRefresh() {
+    func subscribeToContactsAction() {
+        contactsButton.rx.tap.subscribe(onNext: { [unowned self] in
+            viewModel.input.userInteractionSubject.onNext(.contactsTapped)
+        }).disposed(by: disposeBag)
+    }
+    
+    func subscribeToAddAction() {
+        addButton.rx.tap.subscribe(onNext: { [unowned self] in
+            viewModel.input.userInteractionSubject.onNext(.addTapped)
+        }).disposed(by: disposeBag)
+    }
+    
+    func subscribeToPullToRefreshAction() {
         tableView.refreshControl?.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { [unowned self] in
             viewModel.input.loadDataSubject.onNext(.pullToRefresh)
@@ -132,9 +152,5 @@ private extension BlockedViewController {
             viewModel.input.userInteractionSubject.onNext(.itemDeleted($0))
         })
         .disposed(by: disposeBag)
-    }
-    
-    @objc func addTapped() {
-        viewModel.input.userInteractionSubject.onNext(.addTapped)
     }
 }

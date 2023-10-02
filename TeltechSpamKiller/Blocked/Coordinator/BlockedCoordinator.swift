@@ -30,7 +30,8 @@ private extension BlockedCoordinator {
         let dependencies = BlockedViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler, 
                                                          dataSource: BlockedDataSource(),
                                                          coordinatorDelegate: self,
-                                                         addEditBlockedDelegate: self)
+                                                         addEditBlockedDelegate: self,
+                                                         contactPickerDelegate: self)
         let viewModel = BlockedViewModel(dependencies: dependencies)
         let viewController = BlockedViewController(viewModel: viewModel)
         return viewController
@@ -62,5 +63,22 @@ extension BlockedCoordinator: AddEditBlockedDelegate {
     func saveContact(name: String?, number: Int64, isEditMode: Bool) {
         controller.viewModel.input.userInteractionSubject.onNext(.itemUpdated(name: name, number: number, isEditMode: isEditMode))
         presenter.popViewController(animated: true)
+    }
+}
+
+extension BlockedCoordinator: ContactPickerDelegate {
+    func openContactPickerScreen() {
+        let dependencies = ContactPickerViewModel.Dependencies(subscribeScheduler: RxSchedulers.concurentBackgroundScheduler,
+                                                               contactsService: ContactsService.shared,
+                                                               dataSource: BlockedDataSource(),
+                                                               contactPickerDelegate: self)
+        let viewModel = ContactPickerViewModel(dependencies: dependencies)
+        let contactPickerScreen = ContactPickerViewController(viewModel: viewModel)
+        presenter.present(contactPickerScreen, animated: true)
+    }
+    
+    func saveContact(name: String?, number: Int64) {
+        controller.viewModel.input.userInteractionSubject.onNext(.itemUpdated(name: name, number: number, isEditMode: false))
+        presenter.dismiss(animated: true)
     }
 }

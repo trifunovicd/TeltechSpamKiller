@@ -13,6 +13,8 @@ public final class TeltechSpamKillerDataManager {
     
     public static let shared = TeltechSpamKillerDataManager()
     
+    private init() {}
+    
     lazy var persistentContainer: NSPersistentContainer = {
         let momdName = "TeltechContacts"
         let groupName = "group.com.trifunovicd.TeltechSpamKiller"
