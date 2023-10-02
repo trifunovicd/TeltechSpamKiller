@@ -12,6 +12,7 @@ public protocol Erroring: AnyObject {
     var disposeBag: DisposeBag { get }
     
     func initializeErrorObserver(for errorObservable: Observable<NetworkError>)
+    func presentAlert(title: String?, message: String?)
 }
 
 extension Erroring where Self: UIViewController {
@@ -24,6 +25,8 @@ extension Erroring where Self: UIViewController {
                     presentAlert(title: R.string.localizable.general_error_title(), message: R.string.localizable.general_error_message())
                 case .parseError:
                     presentAlert(title: R.string.localizable.parse_error_title(), message: R.string.localizable.parse_error_message())
+                case .extensionError:
+                    presentAlert(title: R.string.localizable.call_directory_extension_error_title(), message: R.string.localizable.call_directory_extension_error_message())
                 }
             })
             .drive()

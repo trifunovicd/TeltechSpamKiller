@@ -10,4 +10,5 @@ import Foundation
 public enum NetworkError: Error, Equatable {
     case generalError
     case parseError
+    case extensionError
 }

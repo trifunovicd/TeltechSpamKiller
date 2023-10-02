@@ -7,8 +7,9 @@
 
 import UIKit
 import RxSwift
+import CallKit
 
-class HomeContainerViewController: UITabBarController {
+class HomeContainerViewController: UITabBarController, Erroring {
     
     var disposeBag = DisposeBag()
     let viewModel: HomeContainerViewModel
@@ -32,5 +33,26 @@ class HomeContainerViewController: UITabBarController {
         let input = HomeContainerViewModel.Input(loadDataSubject: ReplaySubject.create(bufferSize: 1))
         let output = viewModel.transform(input: input)
         disposeBag.insert(output.disposables)
+        initializeErrorObserver(for: output.errorSubject)
+    }
+    
+    func presentAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: R.string.localizable.general_error_action(), style: .cancel))
+        alert.addAction(UIAlertAction(title: R.string.localizable.go_to_settings(), style: .default, handler: { action in
+            if #available(iOS 13.4, *) {
+                CXCallDirectoryManager.sharedInstance.openSettings { (error) in
+                    if let error = error {
+                        print("Error fetching status: \(error.localizedDescription)")
+                    }
+                }
+            } else {
+                if let url = URL(string:UIApplication.openSettingsURLString),
+                   UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }))
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -16,3 +16,6 @@
 "add_contact" = "Add contact";
 "edit_contact" = "Edit contact";
 "name_placeholder" = "Name";
+"call_directory_extension_error_title" = "Call directory error";
+"call_directory_extension_error_message" = "Call extension is disabled. To enable it, please go to Settings -> Phone -> Call Blocking & Identification.";
+"go_to_settings" = "Go to settings";

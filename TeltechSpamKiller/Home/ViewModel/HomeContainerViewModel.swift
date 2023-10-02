@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import CallKit
 import TeltechSpamKillerData
 
 class HomeContainerViewModel: ViewModelType {
@@ -56,6 +57,7 @@ private extension HomeContainerViewModel {
             .subscribe(on: dependencies.subscribeScheduler)
             .subscribe(onNext: { [unowned self] response in
                 output.loaderSubject.onNext(false)
+                checkExtensionStatus()
                 handleContactsResponse(response)
             }, onError: { [unowned self] error in
                 output.onError(error)
@@ -86,5 +88,17 @@ private extension HomeContainerViewModel {
         
         dataManager.saveContext()
         dataManager.reloadExtension()
+    }
+    
+    func checkExtensionStatus() {
+        let identifier = "com.trifunovicd.TeltechSpamKiller.TeltechSpamKillerExtension"
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: identifier) { [weak self] status, error in
+            if let error = error {
+                print("Error checking extension: \(error.localizedDescription)")
+            }
+            if status != .enabled {
+                self?.output.errorSubject.onNext(NetworkError.extensionError)
+            }
+        }
     }
 }
