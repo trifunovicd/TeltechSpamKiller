@@ -19,9 +19,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>voip</string>
-	</array>
 </dict>
 </plist>

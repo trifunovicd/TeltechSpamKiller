@@ -8,12 +8,14 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CallKit
 import TeltechSpamKillerData
 
 class BlockedViewModel: ViewModelType {
     
     struct Input {
-        var loadDataSubject: ReplaySubject<()>
+        let checkExtensionSubject: ReplaySubject<()>
+        let loadDataSubject: ReplaySubject<BlockedLoadType>
         let userInteractionSubject: PublishSubject<BlockedInteractionType>
     }
     
@@ -43,6 +45,7 @@ class BlockedViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         var disposables = [Disposable]()
+        disposables.append(initializeExtensionStatusObservable(for: input.checkExtensionSubject))
         disposables.append(initializeScreenDataObservable(for: input.loadDataSubject))
         disposables.append(initializeInteractionObservable(for: input.userInteractionSubject))
         let output = Output(loaderSubject: PublishSubject(),
@@ -56,11 +59,30 @@ class BlockedViewModel: ViewModelType {
 }
 
 private extension BlockedViewModel {
-    func initializeScreenDataObservable(for subject: ReplaySubject<()>) -> Disposable {
+    func initializeExtensionStatusObservable(for subject: ReplaySubject<()>) -> Disposable {
         return subject
-            .flatMap { [unowned self] (_) -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
+            .observe(on: MainScheduler.instance)
+            .subscribe(on: dependencies.subscribeScheduler)
+            .subscribe(onNext: { [unowned self] _ in
+                let identifier = "com.trifunovicd.TeltechSpamKiller.TeltechSpamKillerExtension"
+                CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: identifier) { [weak self] status, error in
+                    if let error = error {
+                        print("Error checking extension: \(error.localizedDescription)")
+                    }
+                    if status != .enabled {
+                        self?.output.errorSubject.onNext(NetworkError.extensionError)
+                    }
+                }
+            }, onError: { [unowned self] error in
+                output.onError(error)
+            })
+    }
+    
+    func initializeScreenDataObservable(for subject: ReplaySubject<BlockedLoadType>) -> Disposable {
+        return subject
+            .flatMap { [unowned self] loadType -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
                 output.loaderSubject.onNext(true)
-                return dependencies.dataSource.createData()
+                return dependencies.dataSource.createData(for: loadType)
             }
             .observe(on: MainScheduler.instance)
             .subscribe(on: dependencies.subscribeScheduler)
@@ -85,10 +107,12 @@ private extension BlockedViewModel {
                     let number = PhoneFormatService.shared.getFormattedPhoneString(number: contact.number)
                     dependencies.addEditBlockedDelegate?.openAddEditBlockedScreen(name: contact.name, number: number)
                     return .just(output.screenData.value)
-                case .itemAdded(let name, let number):
-                    return dependencies.dataSource.addContact(output.screenData.value, name: name, number: number)
-                case .itemEdited(let name, let number):
-                    return dependencies.dataSource.editContact(output.screenData.value, name: name, number: number, contact: selectedContact)
+                case .itemUpdated(let name, let number, let isEditMode):
+                    if isEditMode {
+                        return dependencies.dataSource.editContact(output.screenData.value, name: name, number: number, contact: selectedContact)
+                    } else {
+                        return dependencies.dataSource.addContact(output.screenData.value, name: name, number: number)
+                    }
                 case .itemDeleted(let indexPath):
                     return dependencies.dataSource.deleteContact(output.screenData.value, indexPath: indexPath)
                 }

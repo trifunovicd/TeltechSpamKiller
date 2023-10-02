@@ -6,7 +6,6 @@ target 'TeltechSpamKiller' do
   use_frameworks!
 
   # Pods for TeltechSpamKiller
-  pod 'Alamofire'
   pod 'PhoneNumberKit'
   pod 'RxCocoa'
   pod 'RxDataSources'

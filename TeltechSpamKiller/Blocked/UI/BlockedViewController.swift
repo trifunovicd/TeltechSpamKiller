@@ -55,12 +55,13 @@ class BlockedViewController: UIViewController, Loading, Erroring {
         setupUI()
         initializeVM()
         observeInputs()
-        viewModel.input.loadDataSubject.onNext(())
+        viewModel.input.checkExtensionSubject.onNext(())
+        viewModel.input.loadDataSubject.onNext(.initial)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = navigationController?.tabBarItem.title
+        title = R.string.localizable.blocked()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -88,7 +89,8 @@ private extension BlockedViewController {
 
 private extension BlockedViewController {
     func initializeVM() {
-        let input = BlockedViewModel.Input(loadDataSubject: ReplaySubject.create(bufferSize: 1), 
+        let input = BlockedViewModel.Input(checkExtensionSubject: ReplaySubject.create(bufferSize: 1),
+                                           loadDataSubject: ReplaySubject.create(bufferSize: 1),
                                            userInteractionSubject: PublishSubject())
         let output = viewModel.transform(input: input)
         disposeBag.insert(output.disposables)
@@ -111,7 +113,7 @@ private extension BlockedViewController {
     func subscribeToPullToRefresh() {
         tableView.refreshControl?.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { [unowned self] in
-            viewModel.input.loadDataSubject.onNext(())
+            viewModel.input.loadDataSubject.onNext(.pullToRefresh)
         })
         .disposed(by: disposeBag)
     }

@@ -18,21 +18,37 @@ final class AppCoordinator: NSObject, Coordinator {
         self.window = window
         self.presenter = UINavigationController()
         super.init()
+        self.applyTheme()
     }
     
     func start() {
         window.rootViewController = presenter
         window.makeKeyAndVisible()
-        createHomeContainerCoordinator(with: presenter)
+        createBlockedCoordinator(with: presenter)
     }
 }
 
 private extension AppCoordinator {
-    func createHomeContainerCoordinator(with presenter: UINavigationController) {
-        let homeContainerCoordinator = HomeContainerCoordinator(presenter: presenter)
-        addChildCoordinator(homeContainerCoordinator)
-        homeContainerCoordinator.parentCoordinatorDelegate = self
-        homeContainerCoordinator.start()
+    func createBlockedCoordinator(with presenter: UINavigationController) {
+        let blockedCoordinator = BlockedCoordinator(presenter: presenter)
+        addChildCoordinator(blockedCoordinator)
+        blockedCoordinator.parentCoordinatorDelegate = self
+        blockedCoordinator.start()
+    }
+    
+    func applyTheme() {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.backgroundColor = UIColor.white
+        navigationBarAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
+        navigationBarAppearance.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
     }
 }
 

@@ -21,7 +21,6 @@ final class BlockedCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        presenter.setNavigationBarHidden(false, animated: true)
         presenter.pushViewController(controller, animated: true)
     }
 }
@@ -61,11 +60,7 @@ extension BlockedCoordinator: AddEditBlockedDelegate {
     }
     
     func saveContact(name: String?, number: Int64, isEditMode: Bool) {
-        if isEditMode {
-            controller.viewModel.input.userInteractionSubject.onNext(.itemEdited(name: name, number: number))
-        } else {
-            controller.viewModel.input.userInteractionSubject.onNext(.itemAdded(name: name, number: number))
-        }
+        controller.viewModel.input.userInteractionSubject.onNext(.itemUpdated(name: name, number: number, isEditMode: isEditMode))
         presenter.popViewController(animated: true)
     }
 }

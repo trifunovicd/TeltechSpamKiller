@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.8.0)
   - Differentiator (5.0.0)
   - PhoneNumberKit (3.7.3):
     - PhoneNumberKit/PhoneNumberKitCore (= 3.7.3)
@@ -21,7 +20,6 @@ PODS:
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - Alamofire
   - PhoneNumberKit
   - R.swift
   - RxCocoa
@@ -31,7 +29,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - Differentiator
     - PhoneNumberKit
     - R.swift
@@ -42,7 +39,6 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   PhoneNumberKit: 3684748d15a7a3e140f717c72844fb0bfe1a9714
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
@@ -52,6 +48,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 48904a77aa897c37dae79c1e2d81e1d598295ef3
+PODFILE CHECKSUM: 1da9ab9c0d9abbb94fcd6b34a506e2c239bed5b3
 
 COCOAPODS: 1.13.0

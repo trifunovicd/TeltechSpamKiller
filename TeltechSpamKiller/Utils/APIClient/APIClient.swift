@@ -7,7 +7,6 @@
 
 import Foundation
 import RxSwift
-import Alamofire
 
 public class APIClient {
     public static let shared = APIClient()
@@ -15,7 +14,7 @@ public class APIClient {
     
     private init() {}
     
-    private var decoder: Alamofire.DataDecoder = {
+    private var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         return decoder
@@ -23,12 +22,15 @@ public class APIClient {
     
     func performRequest<T: Decodable>(_ url: String) -> Single<T> {
         return Single<T>.create { [unowned self] single -> Disposable in
+            
             guard let bundlePath = Bundle.main.path(forResource: url, ofType: "json"),
                   let jsonData = try? String(contentsOfFile: bundlePath).data(using: .utf8),
                   let decodedData = try? decoder.decode(T.self, from: jsonData) else {
+                
                 single(.failure(NetworkError.parseError))
                 return Disposables.create()
             }
+            
             single(.success(decodedData))
             return Disposables.create()
         }

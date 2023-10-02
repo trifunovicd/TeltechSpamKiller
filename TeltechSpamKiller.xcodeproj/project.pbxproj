@@ -22,26 +22,18 @@
 		005D3C952AC623E300E4CAB7 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */; };
 		005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */; };
 		005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C992AC62E0700E4CAB7 /* R.generated.swift */; };
-		005D3CA02AC69CB700E4CAB7 /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */; };
 		005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */; };
-		005D3CA52AC69E7700E4CAB7 /* HomeContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */; };
-		005D3CA82AC6A25600E4CAB7 /* HomeContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */; };
 		005D3CAB2AC6A4BE00E4CAB7 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CAA2AC6A4BE00E4CAB7 /* RxSchedulers.swift */; };
 		005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */; };
-		005D3CB42AC6B0F700E4CAB7 /* RecentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */; };
-		005D3CB62AC6B10900E4CAB7 /* RecentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */; };
-		005D3CB82AC6B13200E4CAB7 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */; };
 		005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CBD2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift */; };
 		005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */; };
 		005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */; };
-		005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC42AC7222F00E4CAB7 /* CallManager.swift */; };
 		005D3CD42AC8497F00E4CAB7 /* TeltechSpamKillerData.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		005D3CD72AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */; };
 		005D3CD82AC8497F00E4CAB7 /* TeltechSpamKillerData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005D3CDD2AC84A7F00E4CAB7 /* TeltechContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CC72AC842DC00E4CAB7 /* TeltechContacts.xcdatamodeld */; };
 		005D3CDF2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */; };
 		005D3CE32AC8621E00E4CAB7 /* BlockedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */; };
-		005D3CE62AC86C4900E4CAB7 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */; };
 		005D3CE92AC89DCC00E4CAB7 /* OutputViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CE82AC89DCC00E4CAB7 /* OutputViewModeling.swift */; };
 		005D3CEC2AC89EB900E4CAB7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CEB2AC89EB900E4CAB7 /* NetworkError.swift */; };
 		005D3CEF2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3CEE2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift */; };
@@ -63,6 +55,7 @@
 		005D3D2C2AC99C6F00E4CAB7 /* TeltechContactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3D2B2AC99C6F00E4CAB7 /* TeltechContactsRepository.swift */; };
 		005D3D2F2AC99CE200E4CAB7 /* TeltechContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3D2E2AC99CE200E4CAB7 /* TeltechContactResponse.swift */; };
 		005D3D322AC99E4200E4CAB7 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D3D312AC99E4200E4CAB7 /* NetworkConstants.swift */; };
+		00E6C5EB2ACB22BF001C54AA /* BlockedLoadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C5EA2ACB22BF001C54AA /* BlockedLoadType.swift */; };
 		67213C319CFF6C3D14563654 /* Pods_TeltechSpamKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FC3CB6C43D19B605F63D2 /* Pods_TeltechSpamKiller.framework */; };
 		6FAA92CF8ED6C8377DEF4892 /* Pods_TeltechSpamKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789C021CFF7609F67F1C150A /* Pods_TeltechSpamKillerTests.framework */; };
 		C75D83B03A562A1AF3036593 /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5442FA152247D88EB0480BDE /* Pods_TeltechSpamKiller_TeltechSpamKillerUITests.framework */; };
@@ -151,26 +144,18 @@
 		005D3C942AC623E300E4CAB7 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		005D3C962AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		005D3C992AC62E0700E4CAB7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		005D3CA22AC69E4500E4CAB7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
-		005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewModel.swift; sourceTree = "<group>"; };
-		005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerCoordinator.swift; sourceTree = "<group>"; };
 		005D3CAA2AC6A4BE00E4CAB7 /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
 		005D3CAD2AC6AB2800E4CAB7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsCoordinator.swift; sourceTree = "<group>"; };
-		005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewModel.swift; sourceTree = "<group>"; };
-		005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		005D3CBD2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedCoordinator.swift; sourceTree = "<group>"; };
 		005D3CBF2AC6D5F800E4CAB7 /* BlockedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewModel.swift; sourceTree = "<group>"; };
 		005D3CC12AC6D60400E4CAB7 /* BlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedViewController.swift; sourceTree = "<group>"; };
-		005D3CC42AC7222F00E4CAB7 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		005D3CC82AC842DC00E4CAB7 /* TeltechContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeltechContacts.xcdatamodel; sourceTree = "<group>"; };
 		005D3CCF2AC8497F00E4CAB7 /* TeltechSpamKillerData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeltechSpamKillerData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		005D3CD12AC8497F00E4CAB7 /* TeltechSpamKillerData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeltechSpamKillerData.h; sourceTree = "<group>"; };
 		005D3CDE2AC84BCA00E4CAB7 /* TeltechSpamKillerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechSpamKillerDataManager.swift; sourceTree = "<group>"; };
 		005D3CE02AC84D4500E4CAB7 /* TeltechSpamKiller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeltechSpamKiller.entitlements; sourceTree = "<group>"; };
 		005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedDataSource.swift; sourceTree = "<group>"; };
-		005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
 		005D3CE82AC89DCC00E4CAB7 /* OutputViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewModeling.swift; sourceTree = "<group>"; };
 		005D3CEB2AC89EB900E4CAB7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		005D3CEE2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableRowItem.swift; sourceTree = "<group>"; };
@@ -193,6 +178,7 @@
 		005D3D2B2AC99C6F00E4CAB7 /* TeltechContactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechContactsRepository.swift; sourceTree = "<group>"; };
 		005D3D2E2AC99CE200E4CAB7 /* TeltechContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechContactResponse.swift; sourceTree = "<group>"; };
 		005D3D312AC99E4200E4CAB7 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		00E6C5EA2ACB22BF001C54AA /* BlockedLoadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedLoadType.swift; sourceTree = "<group>"; };
 		327A216283A91B48A4AF6BD6 /* Pods-TeltechSpamKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.release.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.release.xcconfig"; sourceTree = "<group>"; };
 		346F8A115223E913EB99B552 /* Pods-TeltechSpamKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller/Pods-TeltechSpamKiller.debug.xcconfig"; sourceTree = "<group>"; };
 		4260C64524EB7AC927921B86 /* Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeltechSpamKiller-TeltechSpamKillerUITests/Pods-TeltechSpamKiller-TeltechSpamKillerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -330,8 +316,6 @@
 				005D3CE02AC84D4500E4CAB7 /* TeltechSpamKiller.entitlements */,
 				005D3D332AC9A6D600E4CAB7 /* Assets */,
 				005D3CAC2AC6AAEE00E4CAB7 /* Utils */,
-				005D3C9B2AC69C2E00E4CAB7 /* Home */,
-				005D3CAF2AC6B05200E4CAB7 /* Recents */,
 				005D3CB92AC6D59500E4CAB7 /* Blocked */,
 				005D3C602AC5EE8700E4CAB7 /* AppDelegate.swift */,
 				005D3C622AC5EE8700E4CAB7 /* SceneDelegate.swift */,
@@ -377,42 +361,6 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		005D3C9B2AC69C2E00E4CAB7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				005D3D2D2AC99CBC00E4CAB7 /* Model */,
-				005D3D252AC9945400E4CAB7 /* Repository */,
-				005D3C9C2AC69C5B00E4CAB7 /* Coordinator */,
-				005D3C9D2AC69C6600E4CAB7 /* ViewModel */,
-				005D3C9E2AC69C7500E4CAB7 /* UI */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		005D3C9C2AC69C5B00E4CAB7 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CA72AC6A25600E4CAB7 /* HomeContainerCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		005D3C9D2AC69C6600E4CAB7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CA42AC69E7700E4CAB7 /* HomeContainerViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		005D3C9E2AC69C7500E4CAB7 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				005D3C9F2AC69CB700E4CAB7 /* HomeContainerViewController.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		005D3CA12AC69E3400E4CAB7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,8 +389,6 @@
 				005D3CF82AC8B43A00E4CAB7 /* Extension */,
 				005D3CED2AC8AA6700E4CAB7 /* Collections */,
 				005D3CEA2AC89EAD00E4CAB7 /* Error */,
-				005D3CE42AC86C3B00E4CAB7 /* DataWrapper */,
-				005D3CC32AC7221F00E4CAB7 /* CallManager */,
 				005D3C902AC6234D00E4CAB7 /* Coordinator */,
 				005D3CA12AC69E3400E4CAB7 /* ViewModel */,
 				005D3CA92AC6A4AE00E4CAB7 /* Rx */,
@@ -450,45 +396,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		005D3CAF2AC6B05200E4CAB7 /* Recents */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CB22AC6B07100E4CAB7 /* Coordinator */,
-				005D3CB12AC6B06800E4CAB7 /* ViewModel */,
-				005D3CB02AC6B06300E4CAB7 /* UI */,
-			);
-			path = Recents;
-			sourceTree = "<group>";
-		};
-		005D3CB02AC6B06300E4CAB7 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CB72AC6B13200E4CAB7 /* RecentsViewController.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		005D3CB12AC6B06800E4CAB7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CB52AC6B10900E4CAB7 /* RecentsViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		005D3CB22AC6B07100E4CAB7 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CB32AC6B0F700E4CAB7 /* RecentsCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		005D3CB92AC6D59500E4CAB7 /* Blocked */ = {
 			isa = PBXGroup;
 			children = (
 				0016F6C62AC9B73400617407 /* AddEditBlocked */,
 				005D3CFD2AC8C7ED00E4CAB7 /* Model */,
+				005D3D252AC9945400E4CAB7 /* Repository */,
 				005D3CF22AC8B17B00E4CAB7 /* RxDataSource */,
 				005D3CE12AC8620A00E4CAB7 /* DataSource */,
 				005D3CBC2AC6D5B400E4CAB7 /* Coordinator */,
@@ -523,14 +436,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		005D3CC32AC7221F00E4CAB7 /* CallManager */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CC42AC7222F00E4CAB7 /* CallManager.swift */,
-			);
-			path = CallManager;
-			sourceTree = "<group>";
-		};
 		005D3CD02AC8497F00E4CAB7 /* TeltechSpamKillerData */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,14 +453,6 @@
 				005D3CE22AC8621E00E4CAB7 /* BlockedDataSource.swift */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		005D3CE42AC86C3B00E4CAB7 /* DataWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				005D3CE52AC86C4900E4CAB7 /* DataWrapper.swift */,
-			);
-			path = DataWrapper;
 			sourceTree = "<group>";
 		};
 		005D3CE72AC89D8F00E4CAB7 /* Output */ = {
@@ -612,7 +509,9 @@
 		005D3CFD2AC8C7ED00E4CAB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				005D3D2E2AC99CE200E4CAB7 /* TeltechContactResponse.swift */,
 				005D3CFE2AC8C81E00E4CAB7 /* BlockedInteractionType.swift */,
+				00E6C5EA2ACB22BF001C54AA /* BlockedLoadType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -657,14 +556,6 @@
 				005D3D272AC996B300E4CAB7 /* APIClient.swift */,
 			);
 			path = APIClient;
-			sourceTree = "<group>";
-		};
-		005D3D2D2AC99CBC00E4CAB7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				005D3D2E2AC99CE200E4CAB7 /* TeltechContactResponse.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		005D3D302AC99E2A00E4CAB7 /* Constants */ = {
@@ -1043,14 +934,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				005D3D322AC99E4200E4CAB7 /* NetworkConstants.swift in Sources */,
-				005D3CB82AC6B13200E4CAB7 /* RecentsViewController.swift in Sources */,
-				005D3CB42AC6B0F700E4CAB7 /* RecentsCoordinator.swift in Sources */,
 				005D3CEC2AC89EB900E4CAB7 /* NetworkError.swift in Sources */,
 				005D3CF72AC8B27E00E4CAB7 /* BlockedUITableViewCell.swift in Sources */,
 				005D3CF12AC8AC0300E4CAB7 /* IdentifiableSectionItem.swift in Sources */,
 				005D3D282AC996B300E4CAB7 /* APIClient.swift in Sources */,
+				00E6C5EB2ACB22BF001C54AA /* BlockedLoadType.swift in Sources */,
 				005D3CAE2AC6AB2800E4CAB7 /* AppCoordinator.swift in Sources */,
-				005D3CA52AC69E7700E4CAB7 /* HomeContainerViewModel.swift in Sources */,
 				0016F6CC2AC9DAB300617407 /* AddEditBlockedViewModel.swift in Sources */,
 				0016F6CE2AC9DB4400617407 /* AddEditBlockedInteractionType.swift in Sources */,
 				005D3CFF2AC8C81E00E4CAB7 /* BlockedInteractionType.swift in Sources */,
@@ -1058,25 +947,20 @@
 				005D3CC02AC6D5F800E4CAB7 /* BlockedViewModel.swift in Sources */,
 				005D3CE32AC8621E00E4CAB7 /* BlockedDataSource.swift in Sources */,
 				0016F6D22AC9E1EF00617407 /* PhoneFormatService.swift in Sources */,
-				005D3CC52AC7222F00E4CAB7 /* CallManager.swift in Sources */,
 				005D3C922AC6236800E4CAB7 /* Coordinator.swift in Sources */,
 				005D3D022AC8E89400E4CAB7 /* Loading.swift in Sources */,
 				005D3C9A2AC62E0700E4CAB7 /* R.generated.swift in Sources */,
-				005D3CA82AC6A25600E4CAB7 /* HomeContainerCoordinator.swift in Sources */,
 				0016F6D52AC9F01E00617407 /* TextField.swift in Sources */,
 				005D3CF42AC8B1AB00E4CAB7 /* BlockedRxDataSource.swift in Sources */,
 				0016F6CA2AC9BA2F00617407 /* AddEditBlockedViewController.swift in Sources */,
 				005D3D072AC9001B00E4CAB7 /* Erroring.swift in Sources */,
 				005D3CC22AC6D60400E4CAB7 /* BlockedViewController.swift in Sources */,
-				005D3CA02AC69CB700E4CAB7 /* HomeContainerViewController.swift in Sources */,
 				005D3C972AC6241300E4CAB7 /* ParentCoordinatorDelegate.swift in Sources */,
 				005D3D2C2AC99C6F00E4CAB7 /* TeltechContactsRepository.swift in Sources */,
 				005D3D2F2AC99CE200E4CAB7 /* TeltechContactResponse.swift in Sources */,
-				005D3CB62AC6B10900E4CAB7 /* RecentsViewModel.swift in Sources */,
 				005D3CFC2AC8B9D600E4CAB7 /* UITableView+Extension.swift in Sources */,
 				005D3CBE2AC6D5EC00E4CAB7 /* BlockedCoordinator.swift in Sources */,
 				005D3CE92AC89DCC00E4CAB7 /* OutputViewModeling.swift in Sources */,
-				005D3CE62AC86C4900E4CAB7 /* DataWrapper.swift in Sources */,
 				005D3CFA2AC8B45800E4CAB7 /* UIView+Extension.swift in Sources */,
 				005D3CEF2AC8AA8100E4CAB7 /* IdentifiableRowItem.swift in Sources */,
 				005D3CA32AC69E4500E4CAB7 /* ViewModelType.swift in Sources */,

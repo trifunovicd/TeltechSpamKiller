@@ -12,8 +12,9 @@ import TeltechSpamKillerData
 
 protocol BlockedDataSourcing {
     var dataManager: TeltechSpamKillerDataManager { get }
+    var contactsRepository: TeltechContactsRepositoring { get }
     
-    func createData() -> Observable<[IdentifiableSectionItem<TeltechContact>]>
+    func createData(for type: BlockedLoadType) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
     func addContact(_ data: [IdentifiableSectionItem<TeltechContact>], name: String?, number: Int64) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
     func editContact(_ data: [IdentifiableSectionItem<TeltechContact>], name: String?, number: Int64, contact: TeltechContact?) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
     func deleteContact(_ data: [IdentifiableSectionItem<TeltechContact>], indexPath: IndexPath) -> Observable<[IdentifiableSectionItem<TeltechContact>]>
@@ -21,16 +22,21 @@ protocol BlockedDataSourcing {
 
 class BlockedDataSource: BlockedDataSourcing {
     var dataManager: TeltechSpamKillerDataManager
+    var contactsRepository: TeltechContactsRepositoring
     
-    init(dataManager: TeltechSpamKillerDataManager = TeltechSpamKillerDataManager.shared) {
+    init(dataManager: TeltechSpamKillerDataManager = TeltechSpamKillerDataManager.shared,
+         contactsRepository: TeltechContactsRepositoring = TeltechContactsRepository()) {
         self.dataManager = dataManager
+        self.contactsRepository = contactsRepository
     }
     
-    func createData() -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
-        return fetchBlockedContacts()
-            .flatMap { [unowned self] contacts -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
-                return .just(createScreenData(contacts))
-            }
+    func createData(for loadType: BlockedLoadType) -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
+        switch loadType {
+        case .initial:
+            return fetchOfflineData()
+        case .pullToRefresh:
+            return fetchOnlineData()
+        }
     }
     
     func addContact(_ data: [IdentifiableSectionItem<TeltechContact>], name: String?, number: Int64) -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
@@ -83,16 +89,23 @@ class BlockedDataSource: BlockedDataSourcing {
 }
 
 private extension BlockedDataSource {
-    func fetchBlockedContacts() -> Observable<[TeltechContact]> {
-        return Observable<[TeltechContact]>
-            .create { [unowned self] (observer) -> Disposable in
+    func fetchOfflineData() -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
+        return fetchBlockedContacts()
+            .asObservable()
+            .flatMap { [unowned self] contacts -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
+                return .just(createScreenData(contacts))
+            }
+    }
+    
+    func fetchBlockedContacts() -> Single<[TeltechContact]> {
+        return Single<[TeltechContact]>
+            .create { [unowned self] single -> Disposable in
                 do {
                     let contactsRequest: NSFetchRequest<TeltechContact> = dataManager.fetchRequest(blocked: true)
                     let contacts = try dataManager.context.fetch(contactsRequest)
-                    observer.onNext(contacts)
-                    observer.onCompleted()
+                    single(.success(contacts))
                 } catch {
-                    observer.onError(error)
+                    single(.failure(error))
                 }
                 return Disposables.create()
             }
@@ -104,5 +117,47 @@ private extension BlockedDataSource {
             items.append(IdentifiableRowItem<TeltechContact>(identity: "\(contact.id)", item: contact))
         }
         return [IdentifiableSectionItem<TeltechContact>(identity: "TeltechContacts", items: items)]
+    }
+    
+    func fetchOnlineData() -> Observable<[IdentifiableSectionItem<TeltechContact>]> {
+        return contactsRepository.getContacts()
+            .asObservable()
+            .flatMap { [unowned self] response -> Single<()> in
+                return handleContactsResponse(response)
+            }
+            .flatMap { [unowned self] _ -> Observable<[IdentifiableSectionItem<TeltechContact>]> in
+                return fetchOfflineData()
+            }
+    }
+    
+    func handleContactsResponse(_ response: TeltechContactResponse) -> Single<()> {
+        return Single<()>
+            .create { [unowned self] single -> Disposable in
+                var contactsToIdentify: [Int64] = []
+                var contactsToBlock: [Int64] = []
+                
+                response.suspicious.forEach { numberString in
+                    let filteredString = numberString.filter({ $0.isWholeNumber })
+                    if let number = Int64(filteredString) {
+                        contactsToIdentify.append(number)
+                    }
+                }
+                
+                response.scam.forEach { numberString in
+                    let filteredString = numberString.filter({ $0.isWholeNumber })
+                    if let number = Int64(filteredString) {
+                        contactsToBlock.append(number)
+                    }
+                }
+                
+                dataManager.updateIdentificationContacts(contactsToIdentify)
+                dataManager.updateBlockedContacts(contactsToBlock)
+                
+                dataManager.saveContext()
+                dataManager.reloadExtension()
+                
+                single(.success(()))
+                return Disposables.create()
+            }
     }
 }
