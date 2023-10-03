@@ -17,7 +17,7 @@ Application is divided into three parts:
 2. TeltechSpamKillerExtension (Call Directory Extension)
 	- Holds handler that manages Identification and Blocking entries
 3. TeltechSpamKillerData (Database)
-	- Holds database and data manager, who is in charge of database operations
+	- Holds database and data manager, which is in charge of database operations
 
 Architecture:
 - Project is written using MVVM architecture
